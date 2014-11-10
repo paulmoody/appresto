@@ -1,152 +1,31 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
-    <title>Algo</title>
-    
-<style type="text/css" media="screen">
-
-	
-
-/*====================================================
-	- HTML Table Filter stylesheet
-=====================================================*/
-@import "filtergrid.css";
-
-/*====================================================
-	- General html elements
-=====================================================*/
-body{ 
-	margin:15px; padding:15px; border:1px solid #666;
-	font-family:Arial, Helvetica, sans-serif; font-size:88%; 
-}
-h2{ margin-top: 50px; }
-caption{ margin:10px 0 0 5px; padding:10px; text-align:left; }
-pre{ font-size:13px; margin:5px; padding:5px; background-color:#f4f4f4; border:1px solid #ccc;  }
-.mytable{
-	width:100%; font-size:12px;
-	border:1px solid #ccc;
-}
-th{ background-color:#003366; color:#FFF; padding:2px; border:1px solid #ccc; }
-td{ padding:2px; border-bottom:1px solid #ccc; border-right:1px solid #ccc; }
-
-
-.editableform {
-    margin-bottom: 0;
-}
-
-.editableform .control-group {
-    margin-bottom: 0; 
-    white-space: nowrap; 
-    line-height: 20px; 
-}
-
-.editable-buttons {
-   display: inline-block; 
-   vertical-align: top;
-   margin-left: 7px;
-   zoom: 1; 
-   *display: inline;
-}
-
-.editable-input {
-    vertical-align: top; 
-    display: inline-block; 
-    width: auto; 
-    white-space: normal; 
-    zoom: 1; 
-    *display: inline;   
-}
-
-
-table.forma {
-	font-family: verdana,arial,sans-serif;
-	font-size:14px;
-	color:#333333;
-	border-width: 1px;
-	border-color: #ffffff;
-	border-collapse: collapse;
-}
-table.forma th {
-	border-width: 1px;
-	padding: 8px;
-	border-style: solid;
-	border-color: #ffffff;
-	background-color: #dedede;
-}
-table.forma td {
-	border-width: 1px;
-	padding: 8px;
-	border-style: solid;
-	border-color: #ffffff;
-	background-color: #ffffff;
-}
-
-
-
-.style1 {
-	color: #C9302C;
-}
-
-
-
-</style>
-
-<script language="javascript" type="text/javascript" src="tablefilter.js"></script>
-<link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
-
-
+<script src="css/source-sans-pro.js"></script>
+<link href="css/styles.css" rel="stylesheet">
 </head>
-<body id="main_body">
 
-<h1>Usuarios</h1>
+<body>
 
-
-
-
-<h2>Panel de usuarios</h2>
-
-    <script src="jquery-1.7.1.min.js"></script>
-     
-	<div id="myDiv">
-	<table id="table" cellspacing="0" class="mytable" width="800" >
-	    <thead>
-	        <tr><th><strong>Login</strong></th><th><strong>Pass</strong></th><th><strong>
-				Tipo</strong></th><th><strong>Email</strong></th><th><strong>
-				Nombre</strong></th><th><strong>Apellido</strong></th><th><strong>
-				Cedula</strong></th><th><strong>Direccion</strong></th><th><strong>
-				Telefono</strong></th></tr>	    </thead>
-	    <tbody></tbody>
-	</table>
-	</div>
-    
-    <script>
-    
-  
-   $.ajax({
-		        type: 'POST',
-		        url: 'http://192.168.15.116:8080/restos-backend/rest/usuarios',
-		        contentType: 'application/json; charset=utf-8',
-		        dataType: 'json',
-		        crossDomain: true,
-		        async: false,
-		        data: "{}",
-		        success: function(json) {
-		        		        					     
-  				    $.each(json, function(i, d) {
-					   var row='<tr>';
-					   $.each(d, function(j, e) {
-					      row+='<td>'+e+'</td>';
-					   });
-					   row+='</tr>';
-					   $('#table tbody').append(row);
-					});
-		        
-		        
-		        }/*end jason*/       		 
-
-    });
-            
+<script id="home-tpl" type="text/x-handlebars-template">
+    <div class='header'><h1>Lista de Usuarios</h1></div>
+    <div id="id01">
+    <ul class='employee-list'></ul>
+    </div>
 </script>
+
+<script id="employee-li-tpl" type="text/x-handlebars-template">
+    {{#.}}
+    <li><a href="#employees/{{this.id}}">{{this.firstName}} {{this.lastName}}</a></li>
+    {{/.}}
+</script>
+
+
+<script src="phonegap.js"></script>
+<script src="lib/jquery-1.8.2.min.js"></script>
+<script src="lib/handlebars.js"></script>
+<script src="js/registros.js"></script>
+<script src="js/storage/memory-store.js"></script>
+<script src="main.js"></script>
+
 </body>
 </html>
