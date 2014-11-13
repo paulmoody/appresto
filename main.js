@@ -16,7 +16,8 @@ var app = {
     	    	for(i = 0; i<arr.length; i++) 
     	    	{
     	    		e = arr[i];
-    	    		$('.employee-list').append('<li><img src="img/'+ e.id +'a.png"><a href="#employees/' + e.id + '">' + e.email  +'<br>'+ e.title  + '<br>' + e.title + '</a></li>');
+    	    		$('.employee-list').append('<li><img src="img/'+ e.id +'.png"><a href="#employees/' + e.id + '"><span class="titulo" style="width: 100%">' + e.firstName  +'</span><br><span class="categoria" style="width: 100%">Peliculas</span><br>85 Bfs</a></li>');
+    	    																	  																	
     	    	}
 	},
 	
