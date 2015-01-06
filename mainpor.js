@@ -2,12 +2,24 @@ var app = {
 
 	
 	dibujarRegistrosParam: function(arr) {
+	
+				/*$('.employee-list').append('<li>'
+				+'<div class="banner">'
+				    +'<ul>'
+				        +'<li><img src="img/bibas.png"></li>'
+				        +'<li><img src="img/bibas.png"></li>'
+				        +'<li><img src="img/bibas.png"></li>'
+				    +'</ul>'
+				+'</div>'
+				+'</il>');*/
+    	    		
     	    	var out = "";
     	    	var i;
     	    	for(i = 0; i<arr.length; i++) 
     	    	{
     	    		e = arr[i];
-    	    		$('.employee-list').append('<li><a href="' + e.title + '"><img src="'+e.image+'"><br><span class="categoria" style="width: 100%">'+e.lastName+'</span></a></ul>');
+    	    		
+    	    		$('.employee-list').append('<li><a href="' + e.title + '"><img src="'+e.image+'"><br><span class="categoria" style="width: 100%">'+e.lastName+'</span></a></il>');
     	    																	  																	
     	    	}
 	},
@@ -27,5 +39,7 @@ var app = {
 };
 
 app.initialize();
+
+
 
 //app.dibujarRegistrosParam(registrosJson);

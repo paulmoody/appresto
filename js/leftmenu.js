@@ -37,10 +37,10 @@
     items : []
   };
   
-  for(var i = 0; i < 25; i++) {
+  for(var i = 0; i < 8; i++) {
     $scope.data.items.push({
       id : i,
-      label : "Item " + i
+      label : "Opcion " + (i+1)
     })
   }
   
@@ -56,6 +56,6 @@
 .directive("ionPurchase", function() {
   return {
     restrict : "E",
-    template : "<h2>This is Ion Purchase</h2>"
+    template : "<h2>Area de trabajo</h2>"
   }
 })

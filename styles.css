@@ -63,14 +63,14 @@ body {
 
 .header-button {
     position: absolute;
-    top: 6;
+    top: 6px;
     padding: 7px 5px;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     line-height: 1em;
 }
 
 .header-button-left {
-    left: 4;
+    left: 4px;
 }
 
 .search-bar {
