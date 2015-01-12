@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
-        id        = "org.coenraets.employeedirectory"
+        id        = "moody"
         versionCode="10"
         version   = "1.1.0">
 
@@ -13,8 +13,9 @@
         Panel de usuarios
     </description>
 
-    <author href="http://coenraets.org" email="ccoenraets@gmail.com">
+    <author href="http://www.prosolven.com" email="moodyweb@hotmail.com">
         Paul Moody
     </author>
+    <icon src="icon.png" />
 
 </widget>
