@@ -16,8 +16,5 @@
     <author href="http://www.prosolven.com" email="moodyweb@hotmail.com">
         Paul Moody
     </author>
-    <platform name="android">
-    	<icon src="icon.png"/>
-	</platform>
-
+    <icon src="icon.png" />
 </widget>
