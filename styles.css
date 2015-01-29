@@ -217,6 +217,8 @@ h2 {
 
 #button {
     cursor:pointer;
+    padding:10px;
+    
 }
 
 #menu, #right {
@@ -270,7 +272,6 @@ h2 {
 .nav li{
     display:inline;
     border: 1px solid #E8561D;
-    padding:10px;
     
 }
 
