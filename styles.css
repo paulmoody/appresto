@@ -275,6 +275,6 @@ h2 {
 }
 
 #containerm{width:100%;}
-.leftm{float:left;width:100px;}
-.rightm{float:right;width:100px;}
+.leftm{float:left;width:40px;}
+.rightm{float:right;width:40px}
 .centerm{margin:0 auto;width:100px;}
