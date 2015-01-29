@@ -210,9 +210,9 @@ h2 {
 
 #menubar {
     width:100%;
-    background-color:#444;
+    background-color:#E8561D;
     color: #fff;
-    padding: 10px;
+    font-size: 18px;
 }
 
 #button {
@@ -257,3 +257,24 @@ h2 {
     background-color:#444;
     border-bottom: 1px solid #888;
 }
+
+.nav{
+    list-style:none;
+    margin:0;
+    padding:0;
+    text-align:center;
+    background:#E8561D;
+    border: 1px solid #E8561D;
+    
+}
+.nav li{
+    display:inline;
+    border: 1px solid #E8561D;
+    padding:10px;
+    
+}
+
+#containerm{width:100%;}
+.leftm{float:left;width:100px;}
+.rightm{float:right;width:100px;}
+.centerm{margin:0 auto;width:100px;}
