@@ -23,15 +23,10 @@
         
 		<ul class="nav">
 		  <li id="button" class="leftm"><img src="img/menuico2.png" /></li>
-		  <li class="rightm">
-		  	
-		  	<div id="search">
-            <input style="display: none" title="Search for..." id="forsearch" type="text" class="forsearch_products">
-            <input style="margin-left:160px; position: fixed;" class="search-button" type="submit" value="Search">
-        	</div>	  
-		  </li>
+		  <li class="rightm"><img src="img/Search.png" id="puppies"/></li>
 		  <li class="centerm">
-		  	<img src="img/logonar.jpg" />		  
+		  	<div class="logopri" id="1"><img src="img/logonar.jpg" /></div>
+		  	<div id="2" style="display:none;">My Dynamic Content</div>
 		  </li>
 		</ul>
             
@@ -46,6 +41,7 @@
 
 
 
+
 <script src="phonegap.js"></script>
 <script src="lib/jquery-1.8.2.min.js"></script>
 <script src="lib/handlebars.js"></script>
@@ -56,24 +52,20 @@
 
 $('#button').toggle( 
     function() {
-        $('#right').animate({ left: 200 }, 'slow', function() {
+        $('#right').animate({ left: 250 }, 'slow', function() {
             //$('#button').html('Close');
         });
     }, 
-function() {
-    $('#right').animate({ left: 0 }, 'slow', function() {
+    function() {
+        $('#right').animate({ left: 0 }, 'slow', function() {
             //$('#button').html('Menu');
         });
     }
 );
 
-$( function()
-{
-    $(".search-button").click(function(){
-        $("#forsearch").animate({ width: 'toggle' });
-    })
-} );
-
+$('#puppies').click(function() {
+  $('#1').html('<input name="Button1" type="text" value="" style="width: 200px; height: 40px; font-size: 20;" />');
+});
 
 </script>
 
