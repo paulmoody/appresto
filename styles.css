@@ -278,5 +278,36 @@ h2 {
 
 #containerm{width:100%;}
 .leftm{float:left;width:40px;}
-.rightm{float:right;width:40px}
+.rightm{float:right;width:250px}
 .centerm{margin:0 auto;width:100px;}
+
+
+#search {
+    width: 250px;
+    height: 28px;
+    background-color: #C7D7E8;
+    padding: 6px 0 6px 0px;
+}
+
+input#forsearch.forsearch_products {
+    width: 135px;
+    height: 18px;
+    border: 2px solid #6B9DD3;
+    margin: 0 3px 0 8px;
+    float: right;
+    position:relative;
+    right:90px;
+    padding: 3px;
+}
+
+input.search-button {
+    width: 85px;
+    height: 28px;
+    border: 1px solid white;
+    font-size: 12px;
+    display: block;
+    float: left;
+    font-weight: bold;
+    color: white;
+    background: rgb(237,173,113); 
+}

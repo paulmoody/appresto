@@ -23,8 +23,16 @@
         
 		<ul class="nav">
 		  <li id="button" class="leftm"><img src="img/menuico2.png" /></li>
-		  <li class="rightm"><img src="img/Search.png" /></li>
-		  <li class="centerm"><img src="img/logonar.jpg" /></li>
+		  <li class="rightm">
+		  	
+		  	<div id="search">
+            <input style="display: none" title="Search for..." id="forsearch" type="text" class="forsearch_products">
+            <input style="margin-left:160px; position: fixed;" class="search-button" type="submit" value="Search">
+        	</div>	  
+		  </li>
+		  <li class="centerm">
+		  	<img src="img/logonar.jpg" />		  
+		  </li>
 		</ul>
             
         </div>
@@ -52,12 +60,19 @@ $('#button').toggle(
             //$('#button').html('Close');
         });
     }, 
-    function() {
-        $('#right').animate({ left: 0 }, 'slow', function() {
+function() {
+    $('#right').animate({ left: 0 }, 'slow', function() {
             //$('#button').html('Menu');
         });
     }
 );
+
+$( function()
+{
+    $(".search-button").click(function(){
+        $("#forsearch").animate({ width: 'toggle' });
+    })
+} );
 
 
 </script>
