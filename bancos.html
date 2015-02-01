@@ -8,9 +8,8 @@
 <body>
 
 <script id="home-tpl" type="text/x-handlebars-template">
-   
-
-	   <div id="menu">
+    
+      <div id="menu">
         <ul>
             <li><a href="#">Mi Cuenta</a></li>
             <li><a href="#">Pais: Venezuela</a></li>
@@ -31,28 +30,15 @@
 		</ul>
             
         </div>
-    
-    
-    <div id="id01">
-    <div class="scroll"><ul class='employee-list'></ul></div>
+
+
+	 <div id="id01">
+    	<div class="scroll"><ul class='employee-list'></ul></div>
     </div>
 </script>
 
-<script id="employee-li-tpl" type="text/x-handlebars-template">
-    {{#.}}
-    <li><a href="#employees/{{this.id}}">{{this.firstName}} {{this.lastName}}</a></li>
-    {{/.}}
-</script>
 
-
-<script src="phonegap.js"></script>
-<script src="lib/jquery-1.8.2.min.js"></script>
-<script src="lib/handlebars.js"></script>
-<script src="js/regbibas.js"></script>
-<script src="js/storage/memory-store.js"></script>
-<script src="mainbibas.js"></script>
-
-<script type="text/javascript">
+<script src="phonegap.js"></script><script src="lib/jquery-1.8.2.min.js"></script><script src="lib/handlebars.js"></script><script src="js/regbancos.js"></script><script src="js/storage/memory-store.js"></script><script src="mainbancos.js"></script><script type="text/javascript">
 
 $('#button').toggle( 
     function() {
