@@ -22,7 +22,25 @@ var app = {
     initialize: function() {
     	this.homeTpl = Handlebars.compile($("#home-tpl").html());
     	this.renderHomeView();
-    	this.dibujarRegistrosParam(registrosJson);
+    	
+	    $.ajax({
+	            url: "http://www.flashclicks.com.ve/rest/api/wines",
+	            type: "GET",
+	
+	            contentType: 'application/json; charset=utf-8',
+	            success: function(resultData) {
+	                //here is your json.
+	                  // process it
+	                  alert(resultData);
+	
+	            },
+	            error : function(jqXHR, textStatus, errorThrown) {
+	            },
+	
+	            timeout: 120000,
+        });
+    	
+    	//this.dibujarRegistrosParam(registrosJson);
 	}
 };
 
