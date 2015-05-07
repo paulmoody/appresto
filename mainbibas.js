@@ -31,7 +31,9 @@ var app = {
 	            success: function(resultData) {
 	                //here is your json.
 	                  // process it
-	                  alert(resultData);
+	                  //alert(resultData);
+	                  this.dibujarRegistrosParam(registrosJson);
+
 	
 	            },
 	            error : function(jqXHR, textStatus, errorThrown) {
