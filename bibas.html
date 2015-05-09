@@ -1,5 +1,13 @@
-<html>
+﻿<html>
 <head>
+<!-- Include meta tag to ensure proper rendering and touch zooming 
+<meta name="viewport" content="width=device-width, initial-scale=1">-->
+<!-- Include jQuery Mobile stylesheets -->
+<link rel="stylesheet" href="jquery.mobile-1.4.5.min.css">
+<!-- Include the jQuery library -->
+<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+<!-- Include the jQuery Mobile library -->
+<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 <script src="css/source-sans-pro.js"></script>
 <script src="lib/iscroll.js"></script>
 <link href="styles.css" rel="stylesheet">
@@ -12,11 +20,15 @@
 
 	   <div id="menu">
         <ul>
-            <li><a href="#">Mi Cuenta</a></li>
-            <li><a href="#">Pais: Venezuela</a></li>
-            <li><a href="#">Lista de deseos</a></li>
-            <li><a href="#">Acerca de Flashclicks</a></li>
-        </ul>
+            <li><a href="">Mi Perfil</a></li>
+            <li><a href="#">Favoritos</a></li>
+            <li><a href="#">Notificaciones</a></li>
+            <li><a href="#">Art&iacute;culos y reseñas</a></li>
+            <li><a href="#">Sociales</a></li>
+			<li><a href="#">Novedades</a></li>
+			<li><a href="#">Acerca de Flashclicks</a></li>
+			<li><a href="#">Salir</a></li>        
+		</ul>
     </div>
     <div id="right">
         <div id="menubar">
@@ -30,20 +42,65 @@
 		  </li>
 		</ul>
             
-        </div>
+    </div>
     
     
     <div id="id01">
-    <div class="scroll"><ul class='employee-list'></ul></div>
+     		
+ 
+    	
+    	<div class="scroll">
+    			<div style="padding-top: 10px;padding-bottom: 10px;">
+    				<img src="img/bibas.jpg" alt="" />
+				</div>
+
+    			<div data-role="collapsible" data-theme="a" data-content-theme="a" data-inset="true">
+				    <h3>Entradas</h3>
+				    <ul data-role="listview" class='employee-list'></ul>
+				</div><!-- /collapsible -->
+				
+				<div data-role="collapsible" data-theme="a" data-content-theme="a" data-inset="true">
+				    <h3>Pollos</h3>
+				    <ul data-role="listview" class='employee-list'></ul>
+				</div><!-- /collapsible -->
+				
+				<div data-role="collapsible" data-theme="a" data-content-theme="a" data-inset="true">
+				    <h3>Carnes</h3>
+				    <ul data-role="listview" class='employee-list'></ul>
+				</div><!-- /collapsible -->
+				
+				<div data-role="collapsible" data-theme="a" data-content-theme="a" data-inset="true">
+				    <h3>Pescados</h3>
+				    <ul data-role="listview" class='employee-list'></ul>
+				</div><!-- /collapsible -->
+				
+				<div data-role="collapsible" data-theme="a" data-content-theme="a" data-inset="true">
+				    <h3>Postres</h3>
+				    <ul data-role="listview" class='employee-list'></ul>
+				</div><!-- /collapsible -->
+
+
+
+
+							  	  	
+    	</div>
+
+    	
+    								  	
+    	
+    	</div>
+
+    
+    </div>
     </div>
 </script>
-
+<!--
 <script id="employee-li-tpl" type="text/x-handlebars-template">
     {{#.}}
     <li><a href="#employees/{{this.id}}">{{this.firstName}} {{this.lastName}}</a></li>
     {{/.}}
 </script>
-
+-->
 
 <script src="phonegap.js"></script>
 <script src="lib/jquery-1.8.2.min.js"></script>
@@ -56,20 +113,29 @@
 
 $('#button').toggle( 
     function() {
-        $('#right').animate({ left: 200 }, 'slow', function() {
+        $('#right').animate({ left: 200 }, 'fast', function() {
             //$('#button').html('Close');
         });
     }, 
     function() {
-        $('#right').animate({ left: 0 }, 'slow', function() {
+        $('#right').animate({ left: 0 }, 'fast', function() {
             //$('#button').html('Menu');
         });
     }
 );
 
-$('#puppies').click(function() {
-  $('#1').html('<input name="Button1" type="text" value="" style="width: 200px; height: 42px; font-size: 20;" />');
-});
+$('#puppies').toggle(
+function() {
+  $('#1').html('<input id="botoxx" name="Button1" type="text" value="" style="width: 200px; height: 42px; font-size: 20;" />');
+  $('#botoxx').focus();
+},
+function() {
+  $('#1').html('<img src="img/logonar.jpg" />');
+}
+);
+
+
+
 
 </script>
 

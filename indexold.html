@@ -1,94 +1,62 @@
-
-<!-- saved from url=(0069)file:///C:/Users/tatoww/Documents/GitHub/appresto/appresto/index.html -->
-<html><head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<script src="css/source-sans-pro.js"></script>
-<script src="lib/iscroll.js"></script>
-<link href="styles.css" rel="stylesheet">
-<script src="js/jquery-latest.min.js"></script>
-<script src="js/unslider.min.js"></script>
-<script src="lib/jquery-1.8.2.min.js"></script>
-<style type="text/css">
-.banner { position: relative; overflow: auto; width:100% !important;margin:0 auto; text-align:center !important;}
-    .banner li { list-style: none; }
-        .banner ul li { float: left;}
-.listado li
-{
-display: inline !important;
-list-style-type: none;
-padding-right: 20px;
-}
-</style>
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Cellar</title>
+<link rel="stylesheet" href="css/styles.css" />
 </head>
 
 <body>
-   
-	 <div id="menu">
-        <ul>
-            <li><a href="#">Mi Cuenta</a></li>
-            <li><a href="#">Pais: Venezuela</a></li>
-            <li><a href="#">Lista de deseos</a></li>
-            <li><a href="#">Acerca de Flashclicks</a></li>
-        </ul>
-    </div>
-    <div id="right">
-        <div id="menubar">
-        
-		<ul class="nav">
-		  <li id="button" class="leftm"><img src="img/menuico2.png" /></li>
-		  <li class="rightm"><img src="img/Search.png" id="puppies"/></li>
-		  <li class="centerm">
-		  	<div class="logopri" id="1"><img src="img/logonar.jpg" /></div>
-		  	<div id="2" style="display:none;">My Dynamic Content</div>
-		  </li>
-		</ul>
-            
-        </div>
+
+<div class="header">
+	<input type="text" id="searchKey"/>
+	<button id="btnSearch">Search</button>
+	<button id="btnAdd">New Wine</button>
+</div>
 
 
- 
-    <div id="id01">
-    <div class="scroll"><ul class="employee-list">
-    <!--...
-    <li class="banner">
-				    <ul>
-				        <li><a href=""><img src="img/banner1.png"></a></li>
-				        <li><a href=""><img src="img/banner2.jpg"></a></li>
-				        <li><a href=""><img src="img/banner3.jpg"></a></li>
-				    </ul>
-	</li>
-	-->
-    <li><a href="sport.html"><img src="img/sportfit.jpg"><br><span class="categoria" style="width: 100%">Articulos Deportivos</span></a></li>
-    <li><a href="bibas.html"><img src="img/bibas.png"><br><span class="categoria" style="width: 100%">Bar y restaurante</span></a></li>
-    <li><a href="movie.html"><img src="img/movieexpress.jpg"><br><span class="categoria" style="width: 100%">Peliculas</span></a></li></ul></div>
-    </div>
+<div class="leftArea">
+<ul id="wineList"></ul>
+</div>
 
-<script type="text/javascript">
+<form id="wineForm">
+	
+<div class="mainArea">
 
-$(function() {
-    $('.banner').unslider();
-});
+<label>Id:</label>
+<input id="wineId" name="id" type="text" disabled />
 
+<label>Name:</label>
+<input type="text" id="name" name="name" required>
 
-$('#button').toggle( 
-    function() {
-        $('#right').animate({ left: 200 }, 'fast', function() {
-            //$('#button').html('Close');
-        });
-    }, 
-    function() {
-        $('#right').animate({ left: 0 }, 'fast', function() {
-            //$('#button').html('Menu');
-        });
-    }
-);
+<label>Grapes:</label>
+<input type="text" id="grapes" name="grapes"/>
 
-$('#puppies').click(function() {
-  $('#1').html('<input name="Button1" type="text" value="" style="width: 200px; height: 42px; font-size: 20;" />');
-});
+<label>Country:</label>
+<input type="text" id="country" name="country"/>
 
+<label>Region:</label>
+<input type="text" id="region" name="region"/>
 
+<label>Year:</label>
+<input type="text" id="year" name="year"/>
 
-</script>
+<button id="btnSave">Save</button>
+<button id="btnDelete">Delete</button>
 
-</body></html>
+</div>
+
+<div class="rightArea">
+
+<img id="pic" height="300"/>
+
+<label>Notes:</label>
+<textarea id="description" name="description"></textarea>
+</div>
+
+</form>
+
+<script src="js/jquery-1.7.1.min.js"></script>
+<script src="js/main.js"></script>
+
+</body>
+</html>

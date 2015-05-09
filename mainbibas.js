@@ -2,15 +2,15 @@ var app = {
 
 	//--------------------------------------------------------------
 	
-	var rootURL = "http://localhost/rest/api/wines";
+	//var rootURL = "http://localhost/rest/api/wines";
 	
-	//findAll();
+	/*findAll();
 	
 	function findAll() {
 		console.log('findAll');
 		$.ajax({
 			type: 'GET',
-			url: rootURL,
+			url: "http://localhost/rest/api/wines",
 			dataType: "json", // data type of response
 			success: renderList
 		});
@@ -27,12 +27,12 @@ var app = {
 		});
 	}
 
-	
+	*/
 	//------------------------------------------------------------------
 	
 	
-	dibujarRegistrosParam: function(arr) {
-    	    	var out = "";
+	dibujarRegistrosParam: function() {
+    	    	/*var out = "";
     	    	var i;
     	    	for(i = 0; i<arr.length; i++) 
     	    	{
@@ -40,9 +40,32 @@ var app = {
     	    		$('.employee-list').append('<li><img src="img/bibas'+ e.id +'.jpg"><a href=""><span class="titulo" style="width: 100%">' + e.firstName  +'</span><br><span class="categoria" style="width: 100%">'+e.title+'</span><br>350 Bfs<br><span class="categoria" style="width: 100%">' + e.lastName  +'</span></a></li>');
     	    																	  																	
     	    	}
+    	    	*/
+    	    	console.log('findAll');
+				$.ajax({
+					type: 'GET',
+					url:  "http://localhost/rest/api/wines",
+					dataType: "json", // data type of response
+					success: function(data){
+					
+							
+						var list = data == null ? [] : (data.wine instanceof Array ? data.wine : [data.wine]);
+						$.each(list, function(index, wine) {
+						
+							//$('.employee-list').append('<li><img src="img/bibas'+ wine.id +'.jpg"><a href=""><span class="titulo" style="width: 100%">' + wine.name  +'</span><br><span class="categoria" style="width: 100%">'+wine.name+'</span><br>350 Bfs<br><span class="categoria" style="width: 100%">' + wine.name  +'</span></a></li>');
+							$('.employee-list').append('<li><img src="img/bibas.jpg"><a href=""><span class="titulo" style="width: 100%">' + wine.name  +'</span><br><span class="categoria" style="width: 100%">'+wine.grapes+'</span><br>350 Bfs<br><span class="categoria" style="width: 100%"></span></a><p style="color:green;font-size:1.5em">Agregar</p></li>');
+						
+						
+						});
+	
+										
+					}
+				});
+
 	},
 	
-	 renderHomeView: function() {
+	
+	renderHomeView: function() {
                
                 $('body').html(this.homeTpl());
  
@@ -52,8 +75,8 @@ var app = {
     initialize: function() {
     	this.homeTpl = Handlebars.compile($("#home-tpl").html());
     	this.renderHomeView();    	
-    	//this.dibujarRegistrosParam(registrosJson);
-    	findAll();
+    	this.dibujarRegistrosParam();
+    	//findAll();
 	}
 };
 

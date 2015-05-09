@@ -16,6 +16,8 @@ body {
 
 	font-weight: bold;
 	font-size: 16pt;
+	color:#575353;
+	
 }
 .categoria {
 	font-style: italic;
@@ -137,11 +139,12 @@ li {
 }
 
 li>a {
-    color: #000;
+    color: #969391;;
     display: block;
     padding: 0px;
+    padding-left:30px;
     text-decoration: none;
-    text-align:center;
+    text-align:left;
     width: 100%;
     -webkit-box-flex: 1;
     -moz-box-flex: 1;
@@ -213,7 +216,7 @@ h2 {
     background-color:#E8561D;;
     color: #fff;
     font-size: 40px;
-    height:45px;
+    height:50px;
 }
 
 #button {
