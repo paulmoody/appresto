@@ -1,144 +1,194 @@
-﻿<html>
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
-<!-- Include meta tag to ensure proper rendering and touch zooming 
-<meta name="viewport" content="width=device-width, initial-scale=1">-->
-<!-- Include jQuery Mobile stylesheets -->
-<link rel="stylesheet" href="jquery.mobile-1.4.5.min.css">
-<!-- Include the jQuery library -->
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Bibas</title>
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"/>
 <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
-<!-- Include the jQuery Mobile library -->
 <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-<script src="css/source-sans-pro.js"></script>
-<script src="lib/iscroll.js"></script>
-<link href="styles.css" rel="stylesheet">
+
+<style type="text/css">
+.box{
+position:fixed;
+bottom:-100%;
+left:0%;
+height:100%; 
+background-color: #DBDBDB;
+width: 100%;
+display: block;
+z-index:999999;
+}
+.box-inner {
+    position: absolute;
+    width:100%;
+    top: 0px;
+    bottom: 0px;
+    /*overflow: scroll;*/
+    -webkit-overflow-scrolling: touch;
+}
+.color{
+	color:red;
+}
+.total{
+	color:green;
+}
+.green{
+	color:green;
+}
+.cuestion{
+	display:inline !important;
+}
+
+</style>
+
+
 </head>
 
 <body>
-
 <script id="home-tpl" type="text/x-handlebars-template">
-   
 
-	   <div id="menu">
-        <ul>
-            <li><a href="">Mi Perfil</a></li>
-            <li><a href="#">Favoritos</a></li>
-            <li><a href="#">Notificaciones</a></li>
-            <li><a href="#">Art&iacute;culos y reseñas</a></li>
-            <li><a href="#">Sociales</a></li>
-			<li><a href="#">Novedades</a></li>
-			<li><a href="#">Acerca de Flashclicks</a></li>
-			<li><a href="#">Salir</a></li>        
-		</ul>
-    </div>
-    <div id="right">
-        <div id="menubar">
+
+
+
+<div data-role="page">
+
+	<div data-role="header" data-position="fixed" style="background:#E8561D">
+        <!--<a id="openpanel" data-icon="bars" data-iconpos="notext">Home</a>--> 
+		<img src="img/logonar.jpg" alt="" />
         
-		<ul class="nav">
-		  <li id="button" class="leftm"><img src="img/menuico2.png" /></li>
-		  <li class="rightm"><img src="img/Search.png" id="puppies"/></li>
-		  <li class="centerm">
-		  	<div class="logopri" id="1"><img src="img/logonar.jpg" /></div>
-		  	<div id="2" style="display:none;">My Dynamic Content</div>
-		  </li>
-		</ul>
-            
-    </div>
-    
-    
-    <div id="id01">
-     		
+   <div class="overlay" id="overlay" style="display:none;"></div>
  
-    	
-    	<div class="scroll">
-    			<div style="padding-top: 10px;padding-bottom: 10px;">
+<div class="box" id="box">
+<div class="box-inner" >
+        <ul  class="ul_current" data-role="listview">
+			<li id="close">
+			<h3 style="float: left">Su Pedido:</h3>
+			<h3 style="float: right" class="color">Volver a Menu</h3>
+			<h3 style="bottom: 0;width: 100%;">Total a pagar: <span  class="green" id="totalpre"></span> Bsf</h3>
+			</li> 
+        </ul>
+    </div> 
+</div>     
+        
+	</div><!-- /header -->
+
+
+    
+    
+    
+	<div data-role="content">	
+				
+		<div style="padding-top: 10px;padding-bottom: 10px;">
     				<img src="img/bibas.jpg" alt="" />
 				</div>
 
     			<div data-role="collapsible" data-theme="a" data-content-theme="a" data-inset="true">
 				    <h3>Entradas</h3>
-				    <ul data-role="listview" class='employee-list'></ul>
+				    <ul id="test" data-role="listview" class='employee-list1'>			    	
+				    						    					 				    
+				    </ul>
 				</div><!-- /collapsible -->
 				
 				<div data-role="collapsible" data-theme="a" data-content-theme="a" data-inset="true">
 				    <h3>Pollos</h3>
-				    <ul data-role="listview" class='employee-list'></ul>
+				    <ul id="test" data-role="listview" class='employee-list2'></ul>
 				</div><!-- /collapsible -->
 				
 				<div data-role="collapsible" data-theme="a" data-content-theme="a" data-inset="true">
 				    <h3>Carnes</h3>
-				    <ul data-role="listview" class='employee-list'></ul>
+				    <ul id="test" data-role="listview" class='employee-list3'></ul>
 				</div><!-- /collapsible -->
 				
 				<div data-role="collapsible" data-theme="a" data-content-theme="a" data-inset="true">
-				    <h3>Pescados</h3>
-				    <ul data-role="listview" class='employee-list'></ul>
+				    <h3>Ensaladas</h3>
+				    <ul id="test" data-role="listview" class='employee-list4'></ul>
 				</div><!-- /collapsible -->
 				
 				<div data-role="collapsible" data-theme="a" data-content-theme="a" data-inset="true">
 				    <h3>Postres</h3>
-				    <ul data-role="listview" class='employee-list'></ul>
+				    <ul id="test" data-role="listview" class='employee-list5'></ul>
 				</div><!-- /collapsible -->
+  	 								
 
 
 
+	
+	</div><!-- /content -->
 
-							  	  	
-    	</div>
+	<div class="footer" data-role="footer" data-position="fixed" style="z-index: 1">
+		<h4>Su Pedido:   <span  class="total"></span> bsf </h4>
+		<a id="openpanel" data-icon="bars" data-iconpos="notext">Home</a>
+	</div><!-- /footer -->
+</div><!-- /page -->
 
-    	
-    								  	
-    	
-    	</div>
-
-    
-    </div>
-    </div>
 </script>
-<!--
-<script id="employee-li-tpl" type="text/x-handlebars-template">
-    {{#.}}
-    <li><a href="#employees/{{this.id}}">{{this.firstName}} {{this.lastName}}</a></li>
-    {{/.}}
-</script>
--->
-
 <script src="phonegap.js"></script>
-<script src="lib/jquery-1.8.2.min.js"></script>
 <script src="lib/handlebars.js"></script>
-<script src="js/regbibas.js"></script>
-<script src="js/storage/memory-store.js"></script>
 <script src="mainbibas.js"></script>
 
 <script type="text/javascript">
 
-$('#button').toggle( 
-    function() {
-        $('#right').animate({ left: 200 }, 'fast', function() {
-            //$('#button').html('Close');
-        });
-    }, 
-    function() {
-        $('#right').animate({ left: 0 }, 'fast', function() {
-            //$('#button').html('Menu');
-        });
-    }
-);
 
-$('#puppies').toggle(
-function() {
-  $('#1').html('<input id="botoxx" name="Button1" type="text" value="" style="width: 200px; height: 42px; font-size: 20;" />');
-  $('#botoxx').focus();
-},
-function() {
-  $('#1').html('<img src="img/logonar.jpg" />');
+$(function() {
+    
+    $('#openpanel').click(function(){
+            $('#box').animate({'bottom':'0'},300);
+        });
+  
+    $('#close').click(function(){
+        $('#box').animate({'bottom':'-100%'},300)        
+    });
+ 
+});
+
+//$(document).on("click", "#test li" ,function (event) {
+    //alert($("li p").get(0));
+    //$('li p').text();
+    //alert($(this).find("p:first").text());
+    
+    
+//}); 
+
+var theTotal = 0;
+$(document).on("click", "#test li" ,function (event) {
+   theTotal = Number(theTotal) + Number($(this).find("p:first").text());
+    $('.total').text("Total: "+theTotal);
+    $('#totalpre').text(theTotal);
+    if(theTotal > 0) {
+	$( ".footer" ).show();
+	}
+	else{
+		$( ".footer" ).hide();
+	}
+	
+	var item = ($(this).text());
+
+    $('.ul_current').append($('<li><a href="#" class="ui-btn ui-shadow ui-btn-icon-left ui-custom-icon ui-privacy" >'+ item +'</a></li>', {
+    }));
+	
+        
+});
+
+
+
+$('.total').text("Total: "+theTotal);
+
+	$("#show").click(function(){
+	    $("p").show();
+	});  
+
+
+if(theTotal > 0) {
+	$( ".footer" ).show();
 }
-);
-
-
+else{
+	$( ".footer" ).hide();
+}
 
 
 </script>
 
-
 </body>
+
 </html>

@@ -6,7 +6,14 @@ require 'Slim/Slim.php';
 
 $app = new Slim();
 
-$app->get('/wines', 'getWines');
+$app->get('/wines/pollos', 'getWinesPollos');
+$app->get('/wines/entradas', 'getWinesEntradas');
+$app->get('/wines/carnes', 'getWinesCarnes');
+$app->get('/wines/ensaladas', 'getWinesEnsaladas');
+$app->get('/wines/pescados', 'getWinesPescados');
+$app->get('/wines/', 'getWines');
+$app->get('/wines/', 'getWines');
+$app->get('/wines/', 'getWines');
 $app->get('/wines/:id',	'getWine');
 $app->get('/wines/search/:query', 'findByName');
 $app->post('/wines', 'addWine');
@@ -15,8 +22,8 @@ $app->delete('/wines/:id',	'deleteWine');
 
 $app->run();
 
-function getWines() {
-	$sql = "select * FROM wine";
+function getWinesPollos() {
+	$sql = "select * FROM wine WHERE grapes='pollos'";
 	//$sql = "SELECT name FROM `oc_product` p join oc_product_description d on p.product_id=d.product_id group by name";
 	try {
 		$db = getConnection();
@@ -29,8 +36,68 @@ function getWines() {
 	}
 }
 
+function getWinesEntradas() {
+	$sql = "select * FROM wine WHERE grapes='entradas'";
+	//$sql = "SELECT name FROM `oc_product` p join oc_product_description d on p.product_id=d.product_id group by name";
+	try {
+		$db = getConnection();
+		$stmt = $db->query($sql);  
+		$wines = $stmt->fetchAll(PDO::FETCH_OBJ);
+		$db = null;
+		echo '{"wine": ' . json_encode($wines) . '}';
+	} catch(PDOException $e) {
+		echo '{"error":{"text":'. $e->getMessage() .'}}'; 
+	}
+}
+
+function getWinesCarnes() {
+	$sql = "select * FROM wine WHERE grapes='carnes'";
+	//$sql = "SELECT name FROM `oc_product` p join oc_product_description d on p.product_id=d.product_id group by name";
+	try {
+		$db = getConnection();
+		$stmt = $db->query($sql);  
+		$wines = $stmt->fetchAll(PDO::FETCH_OBJ);
+		$db = null;
+		echo '{"wine": ' . json_encode($wines) . '}';
+	} catch(PDOException $e) {
+		echo '{"error":{"text":'. $e->getMessage() .'}}'; 
+	}
+}
+
+function getWinesEnsaladas() {
+	$sql = "select * FROM wine WHERE grapes='ensaladas'";
+	//$sql = "SELECT name FROM `oc_product` p join oc_product_description d on p.product_id=d.product_id group by name";
+	try {
+		$db = getConnection();
+		$stmt = $db->query($sql);  
+		$wines = $stmt->fetchAll(PDO::FETCH_OBJ);
+		$db = null;
+		echo '{"wine": ' . json_encode($wines) . '}';
+	} catch(PDOException $e) {
+		echo '{"error":{"text":'. $e->getMessage() .'}}'; 
+	}
+}
+
+function getWinesPescados() {
+	$sql = "select * FROM wine WHERE grapes='pescados'";
+	//$sql = "SELECT name FROM `oc_product` p join oc_product_description d on p.product_id=d.product_id group by name";
+	try {
+		$db = getConnection();
+		$stmt = $db->query($sql);  
+		$wines = $stmt->fetchAll(PDO::FETCH_OBJ);
+		$db = null;
+		echo '{"wine": ' . json_encode($wines) . '}';
+	} catch(PDOException $e) {
+		echo '{"error":{"text":'. $e->getMessage() .'}}'; 
+	}
+}
+
+
+
+
+
 function getWine($id) {
-	$sql = "SELECT * FROM oc_product WHERE product_id=:id";
+	$sql = "SELECT * FROM wine WHERE id=:id";
 	try {
 		$db = getConnection();
 		$stmt = $db->prepare($sql);  
