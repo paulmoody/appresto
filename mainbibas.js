@@ -43,7 +43,7 @@ var app = {
     	    	console.log('findAll');
 				$.ajax({
 					type: 'GET',
-					url:  "http://192.168.1.112/rest/api/wines/carnes",
+					url:  "http://www.flashclicks.com.ve/rest/api/wines/carnes",
 					dataType: "json", // data type of response
 					success: function(data){
 					
@@ -63,7 +63,7 @@ var app = {
 				
 				$.ajax({
 					type: 'GET',
-					url:  "http://192.168.1.112/rest/api/wines/carnes",
+					url:  "http://www.flashclicks.com.ve/rest/api/wines/carnes",
 					dataType: "json", // data type of response
 					success: function(data){
 					
@@ -83,7 +83,7 @@ var app = {
 				
 				$.ajax({
 					type: 'GET',
-					url:  "http://192.168.1.112/rest/api/wines/carnes",
+					url:  "http://www.flashclicks.com.ve/rest/api/wines/carnes",
 					dataType: "json", // data type of response
 					success: function(data){
 					
@@ -103,7 +103,7 @@ var app = {
 				
 				$.ajax({
 					type: 'GET',
-					url:  "http://192.168.1.112/rest/api/wines/carnes",
+					url:  "http://www.flashclicks.com.ve/rest/api/wines/carnes",
 					dataType: "json", // data type of response
 					success: function(data){
 					
@@ -123,7 +123,7 @@ var app = {
 				
 				$.ajax({
 					type: 'GET',
-					url:  "http://192.168.1.112/rest/api/wines/carnes",
+					url:  "http://www.flashclicks.com.ve/rest/api/wines/carnes",
 					dataType: "json", // data type of response
 					success: function(data){
 					
