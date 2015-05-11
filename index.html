@@ -18,7 +18,14 @@ padding-right: 20px;
 <script src="js/jquery.flexslider.js"></script>
 <script type="text/javascript" charset="utf-8">
   $(window).load(function() {
-    $('.flexslider').flexslider();
+    $('.flexslider').flexslider({
+    
+    
+    controlNav: false,
+    directionNav: false
+    
+    });
+    	
   });
 </script>
 
@@ -94,18 +101,19 @@ z-index:999999;
     <div class="scroll"><ul class="employee-list">
     <li>
     
-	  <div class="flexslider">
+	  <div class="flexslider"  style="width:100%">
 		  <ul class="slides">
 		    <li>
-		      <img src="img/shopping.jpg" >
+		      <img src="img/banner4.jpg" >
 		    </li>
 		    <li>
-		      <img src="img/fastfood.jpg" >
+		      <img src="img/banner5.jpg" >
 		    </li>
 		  </ul>
 	  </div>
     </li>	
-	<li><a href=""><img src="img/banresto.jpg" style="width:100%"></a></li>
+	<li><a href="" style="
+    padding-left: 0px"><img src="img/banresto.jpg"></a></li>
     <!--<li><a href="maracaibo.html"><img src="img/maracaibo.jpg" style="width:100%"></a></li>
     <li><a href="bibas.html"><img src="img/bibas.png" style="width:100%"></a></li>
     <li><a href="movie.html"><img src="img/movieexpress.jpg" style="width:100%"></a></li>-->
