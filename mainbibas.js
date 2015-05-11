@@ -63,7 +63,7 @@ var app = {
 				
 				$.ajax({
 					type: 'GET',
-					url:  "http://localhost/rest/api/wines/carnes",
+					url:  "http://192.168.1.112/rest/api/wines/carnes",
 					dataType: "json", // data type of response
 					success: function(data){
 					
