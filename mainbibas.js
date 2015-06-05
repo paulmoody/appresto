@@ -13,12 +13,36 @@ var app = {
 															  																	
     	    	};
     	    	
-    	    	for(i = 3; i<arr.length; i++) 
+    	    	for(i = 3; i<5; i++) 
     	    	{
     	    		e = arr[i];
-    	    		$('.employee-list2').append('<li class="precio"><a href="#"><img src="img/bibas.jpg"><h2>'+ e.firstName +'</h2><p style="display:none" >150</p><label for="name2" style="color: green;font-size: 15px; ">150 Bsf</label><input type="text" name="name2" id="name2" value="" data-clear-btn="true" hidden="hidden" data-role="none"></a></li>');
+    	    		$('.employee-list2').append('<li class="precio"><a href="#"><img src="img/bibas.jpg"><h2>'+ e.firstName +'</h2><p style="display:none" >150</p><label for="name2" style="color: green;font-size: 15px; ">150 Bsfasd</label><input type="text" name="name2" id="name2" value="" data-clear-btn="true" hidden="hidden" data-role="none"></a></li>');
 															  																	
     	    	};
+    	    	
+    	    	for(i = 5; i<7; i++) 
+    	    	{
+    	    		e = arr[i];
+    	    		$('.employee-list3').append('<li class="precio"><a href="#"><img src="img/bibas.jpg"><h2>'+ e.firstName +'</h2><p style="display:none" >150</p><label for="name2" style="color: green;font-size: 15px; ">150 Bsf</label><input type="text" name="name2" id="name2" value="" data-clear-btn="true" hidden="hidden" data-role="none"></a></li>');
+															  																	
+    	    	};
+    	    	
+    	    	for(i = 7; i<arr.length; i++) 
+    	    	{
+    	    		e = arr[i];
+    	    		$('.employee-list4').append('<li class="precio"><a href="#"><img src="img/bibas.jpg"><h2>'+ e.firstName +'</h2><p style="display:none" >150</p><label for="name2" style="color: green;font-size: 15px; ">150 Bsf</label><input type="text" name="name2" id="name2" value="" data-clear-btn="true" hidden="hidden" data-role="none"></a></li>');
+															  																	
+    	    	};
+    	    	
+    	    	for(i = 9; i<arr.length; i++) 
+    	    	{
+    	    		e = arr[i];
+    	    		$('.employee-list5').append('<li class="precio"><a href="#"><img src="img/bibas.jpg"><h2>'+ e.firstName +'</h2><p style="display:none" >150</p><label for="name2" style="color: green;font-size: 15px; ">150 Bsf</label><input type="text" name="name2" id="name2" value="" data-clear-btn="true" hidden="hidden" data-role="none"></a></li>');
+															  																	
+    	    	};
+
+
+
 
     	    	
     	    	
