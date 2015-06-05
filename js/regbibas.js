@@ -40,8 +40,6 @@ var registrosJson=[
 {"id": 34, "firstName": "Sopa del dia", "image": "", "lastName": "Todos los días nuestro chef prepara una rica sopa que no podrás  pasarla por alto.", "title":"Aves", "managerId": 2, "city":"Scranton, PA", "precio":"180", "officePhone":"570-968-5741", "email":""},
 {"id": 35, "firstName": "Steak Pimienta", "image": "", "lastName": "Carne de res flambeada con brandy y varios tipos de pimienta.", "title":"Aves", "managerId": 2, "city":"Scranton, PA", "precio":"180", "officePhone":"570-968-5741", "email":""},
 {"id": 36, "firstName": "Club Sandwich", "image": "", "lastName": "Pan cuadrado con jugoso filete de pechuga, jamón de pierna y queso gouda.", "title":"Aves", "managerId": 2, "city":"Scranton, PA", "precio":"180", "officePhone":"570-968-5741", "email":""},
-{"id": 37, "firstName": "g", "image": "", "lastName": "r", "title":"Aves", "managerId": 2, "city":"Scranton, PA", "precio":"180", "officePhone":"570-968-5741", "email":""},
-
 ];
 
 
