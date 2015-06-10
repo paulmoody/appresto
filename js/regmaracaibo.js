@@ -1,36 +1,40 @@
-﻿var registrosJson=[
-{"id": 1, "firstName": "Hamburguesa de Carne", "image": "", "lastName": "Hamburguesa americana de carne con ingredientes frescos listos para degustar.", "title":"Hamburguesas", "managerId": 0, "city":"New York, NY", "cellPhone":"212-999-8888", "officePhone":"212-999-8887", "email":"ryan@dundermifflin.com"},
-{"id": 2, "firstName": "Pasta Neudo", "image": "", "lastName": "Pasta de su eleccion con salsa a base de ricos tomates y un toque de especies tradicionales.", "title":"Pastas", "managerId": 1, "city":"Scranton, PA", "cellPhone":"570-865-2536", "officePhone":"570-123-4567", "email":"michael@dundermifflin.com"},
-{"id": 3, "firstName": "Nachos", "image": "", "lastName": "Deliciosos nachos tipicos de Mexico con una salsa hecha en casa", "title":"Entradas", "managerId": 2, "city":"Scranton, PA", "cellPhone":"570-865-1158", "officePhone":"570-843-8963", "email":"dwight@dundermifflin.com"},
-{"id": 4, "firstName": "Pollo a la Mostaza", "image": "", "lastName": "Pollo preparado con una espectacular salsa con un toque de mostaza.", "title":"Aves", "managerId": 2, "city":"Scranton, PA", "cellPhone":"570-865-8989", "officePhone":"570-968-5741", "email":"dwight@dundermifflin.com"},
-{"id": 4, "firstName": "Nom.", "image": "", "lastName": "Desc.", "title":"cat.", "managerId": 2, "city":"ciud.", "cellPhone":"cell", "officePhone":"cell", "email":"abcd@abcd.com"},
-{"id": 4, "firstName": "Papas Supremas", "image": "", "lastName": "DEliciosas papas onduladas, banadas en queso cheddar, tocineta, crunch y cebollin finanmente picadas.", "title":"Entradas", "managerId": 2, "city":"ciud.", "cellPhone":"cell", "officePhone":"cell", "email":"abcd@abcd.com"},
-{"id": 4, "firstName": "Cuatro", "image": "", "lastName": "Arepa frita o asadas de carne al carbon con pico de gallo y queso rallado "},
-{"id": 4, "firstName": "Furro", "image": "", "lastName": "Arepa frita o asadas de pollo al carbon con pico de gallo y queso rallado "},
-{"id": 4, "firstName": "Charrasca", "image": "", "lastName": "Arepa frita o asadas mixta de carne y pollo al carbon con pico de gallo y queso rallado "},
-{"id": 4, "firstName": "Cesar con Pollo", "image": "", "lastName": "Pechuga de Pollo grillada, lechuga Romana, Banada con nuestro aderezi cesar y crotones"},
-{"id": 4, "firstName": "Cole Slaw", "image": "", "lastName": "Ensalada de repollo blanco y morado con zanahoria rallada y aderezo de mayonesa dulce"},
-{"id": 4, "firstName": "Ejecutivo", "image": "", "lastName": "Una proteina con tres contornos de su preferencia acompanado con la crema del dia y un nestea"},
-{"id": 4, "firstName": "Sopa", "image": "", "lastName": "Deliciosa Sopa preparada por nuestro chef"},
-{"id": 4, "firstName": "Puerto de Maracaibo", "image": "", "lastName": "Nuestra clasica y deliciosa Hamburguesa de carne o pollo cocida al termino de su eleccion acompanada de papas fritas"},
-{"id": 4, "firstName": "Vereda del Lago", "image": "", "lastName": "Hamburguesa de carne o pollo cubierta con una deliciosa capa de salsa al pesto con queso mozzarella"},
-{"id": 4, "firstName": "Lago de Maracaibo", "image": "", "lastName": "Hamburguesa de carne o pollo cubierta con queso azul tocineta y queso de mano"},
-{"id": 4, "firstName": "Relampago del Catatumbo", "image": "", "lastName": "Hamburguesa de carne o pollo cubierta de nuestra salsa BBQ, tocineta, cebolla caramelizada, champinones, y queso de mano"},
-{"id": 4, "firstName": "Maracaibos`s grill & BQQ", "image": "", "lastName": "Hamburguesa de 360 grs de carne, Tocineta, Cebolla Caramelizada"},
-{"id": 4, "firstName": "Ciudad del Solamada", "image": "", "lastName": "Hamburguesa de carne o pollo, tocineta y queso de mano"},
-{"id": 4, "firstName": "Vegetariana", "image": "", "lastName": "Hamburguesa de carne o pollo, tocineta y huevo frito"},
-{"id": 4, "firstName": "La grey Zuliana", "image": "", "lastName": "Desc.", "title":"Parrillas", "managerId": 2, "city":"ciud.", "cellPhone":"cell", "officePhone":"cell", "email":"abcd@abcd.com"},
-{"id": 4, "firstName": "El Saladillo", "image": "", "lastName": "Desc.", "title":"Parrillas", "managerId": 2, "city":"ciud.", "cellPhone":"cell", "officePhone":"cell", "email":"abcd@abcd.com"},
-{"id": 4, "firstName": "18 de Noviembre", "image": "", "lastName": "Desc.", "title":"Parrillas", "managerId": 2, "city":"ciud.", "cellPhone":"cell", "officePhone":"cell", "email":"abcd@abcd.com"},
-{"id": 4, "firstName": "Tradicional", "image": "", "lastName": "Desc.", "title":"Panes", "managerId": 2, "city":"ciud.", "cellPhone":"cell", "officePhone":"cell", "email":"abcd@abcd.com"},
-{"id": 4, "firstName": "Americana", "image": "", "lastName": "Desc.", "title":"Panes", "managerId": 2, "city":"ciud.", "cellPhone":"cell", "officePhone":"cell", "email":"abcd@abcd.com"},
-{"id": 4, "firstName": "Mexicano", "image": "", "lastName": "Desc.", "title":"Panes", "managerId": 2, "city":"ciud.", "cellPhone":"cell", "officePhone":"cell", "email":"abcd@abcd.com"},
-{"id": 4, "firstName": "Nom.", "image": "", "lastName": "Desc.", "title":"cat.", "managerId": 2, "city":"ciud.", "cellPhone":"cell", "officePhone":"cell", "email":"abcd@abcd.com"},
-{"id": 4, "firstName": "Nom.", "image": "", "lastName": "Desc.", "title":"cat.", "managerId": 2, "city":"ciud.", "cellPhone":"cell", "officePhone":"cell", "email":"abcd@abcd.com"},
-{"id": 4, "firstName": "Nom.", "image": "", "lastName": "Desc.", "title":"cat.", "managerId": 2, "city":"ciud.", "cellPhone":"cell", "officePhone":"cell", "email":"abcd@abcd.com"},
-{"id": 4, "firstName": "Nom.", "image": "", "lastName": "Desc.", "title":"cat.", "managerId": 2, "city":"ciud.", "cellPhone":"cell", "officePhone":"cell", "email":"abcd@abcd.com"},
-{"id": 4, "firstName": "Nom.", "image": "", "lastName": "Desc.", "title":"cat.", "managerId": 2, "city":"ciud.", "cellPhone":"cell", "officePhone":"cell", "email":"abcd@abcd.com"},
+var registrosJson=[
+//Entradas
+{"id": 1, "firstName": "Almuerzo Ejecutivo", "image": "", "lastName": "E", "title":"Almuerzo", "managerId": 1, "city":"", "precio":"300", "officePhone":"570-123-4567", "email":""},
+{"id": 2, "firstName": "Charrasca", "image": "", "lastName": "n", "title":"Arepas", "managerId": 2, "city":"", "precio":"250", "officePhone":"570-843-8963", "email":""},
+//Pollos
+{"id": 3, "firstName": "Furro", "image": "", "lastName": "a", "title":"Arepas", "managerId": 2, "city":"Scranton, PA", "precio":"220", "officePhone":"570-968-5741", "email":""},
+{"id": 4, "firstName": "Cuatro", "image": "", "lastName": "t", "title":"Arepas", "managerId": 2, "city":"Scranton, PA", "precio":"220", "officePhone":"570-968-5741", "email":""},
+//Carnes
+{"id": 5, "firstName": "Patacón", "image": "", "lastName": "o", "title":"Arepas", "managerId": 2, "city":"Scranton, PA", "precio":"350", "officePhone":"570-968-5741", "email":""},
+{"id": 6, "firstName": "Agua", "image": "", "lastName": "t.", "title":"Bebidas", "managerId": 2, "city":"Scranton, PA", "precio":"15", "officePhone":"570-968-5741", "email":""},
+//Ensaladas
+{"id": 7, "firstName": "Jugo Natural", "image": "", "lastName": "e", "title":"Bebidas", "managerId": 2, "city":"Scranton, PA", "precio":"60", "officePhone":"570-968-5741", "email":""},
+{"id": 8, "firstName": "Nestea Grande", "image": "", "lastName": "a", "title":"Bebidas", "managerId": 2, "city":"Scranton, PA", "precio":"60", "officePhone":"570-968-5741", "email":""},
+//Postres
+{"id": 9, "firstName": "Refresco Familiar", "image": "", "lastName": "u", "title":"Bebidas", "managerId": 2, "city":"Scranton, PA", "precio":"100", "officePhone":"570-968-5741", "email":""},
+{"id": 10, "firstName": "Choripan Maracucho", "image": "", "lastName": "k", "title":"Choripanes", "managerId": 2, "city":"Scranton, PA", "precio":"350", "officePhone":"570-968-5741", "email":""},
+{"id": 11, "firstName": "Perro Caliente", "image": "", "lastName": "j", "title":"Choripanes", "managerId": 2, "city":"Scranton, PA", "precio":"250", "officePhone":"570-968-5741", "email":""},
+{"id": 12, "firstName": "Perro Caliente Americano", "image": "", "lastName": "r", "title":"Choripanes", "managerId": 2, "city":"Scranton, PA", "precio":"280", "officePhone":"570-968-5741", "email":""},
+{"id": 13, "firstName": "Phillys Cheese Steak", "image": "", "lastName": "t", "title":"Choripanes", "managerId": 2, "city":"Scranton, PA", "precio":"400", "officePhone":"570-968-5741", "email":""},
+{"id": 14, "firstName": "Puente sobre el Lago", "image": "", "lastName": "g", "title":"Costillas", "managerId": 2, "city":"Scranton, PA", "precio":"500", "officePhone":"570-968-5741", "email":""},
+{"id": 15, "firstName": "César", "image": "", "lastName": "j", "title":"Ensaladas", "managerId": 2, "city":"Scranton, PA", "precio":"180", "officePhone":"570-968-5741", "email":""},
+{"id": 16, "firstName": "César con Pollo", "image": "", "lastName": "p", "title":"Ensaladas", "managerId": 2, "city":"Scranton, PA", "precio":"280", "officePhone":"570-968-5741", "email":""},
+{"id": 17, "firstName": "Ración de Ensalada", "image": "", "lastName": "ñ", "title":"Ensaladas", "managerId": 2, "city":"Scranton, PA", "precio":"160", "officePhone":"570-968-5741", "email":""},
+{"id": 18, "firstName": "Papas Supremas", "image": "", "lastName": "b", "title":"Entradas", "managerId": 2, "city":"Scranton, PA", "precio":"201", "officePhone":"570-968-5741", "email":""},
+{"id": 19, "firstName": "Hamburguesa Ciudad del Sol Amada", "image": "", "lastName": "v", "title":"Hamburguesas", "managerId": 2, "city":"Scranton, PA", "precio":"480", "officePhone":"570-968-5741", "email":""},
+{"id": 20, "firstName": "Lago de  Maracaibo", "image": "", "lastName": "d", "title":"Hamburguesas", "managerId": 2, "city":"Scranton, PA", "precio":"450", "officePhone":"570-968-5741", "email":""},
+{"id": 21, "firstName": "Maracaibo Grill and Bar", "image": "", "lastName": "P", "title":"Hamburguesas", "managerId": 2, "city":"Scranton, PA", "precio":"600", "officePhone":"570-968-5741", "email":""},
+{"id": 22, "firstName": "Puerto de Maracaibo", "image": "", "lastName": "P", "title":"Hamburguesas", "managerId": 2, "city":"Scranton, PA", "precio":"350", "officePhone":"570-968-5741", "email":""},
+{"id": 23, "firstName": "Relámpago de Catatumbo", "image": "", "lastName": "k", "title":"Hamburguesas", "managerId": 2, "city":"Scranton, PA", "precio":"450", "officePhone":"570-968-5741", "email":""},
+{"id": 24, "firstName": "Vereda del Lago", "image": "", "lastName": "ñ", "title":"Hamburguesas", "managerId": 2, "city":"Scranton, PA", "precio":"360", "officePhone":"570-968-5741", "email":""},
+{"id": 25, "firstName": "Vergataria", "image": "", "lastName": "h", "title":"Hamburguesas", "managerId": 2, "city":"Scranton, PA", "precio":"400", "officePhone":"570-968-5741", "email":""},
+{"id": 26, "firstName": "18 de Noviembre", "image": "", "lastName": "f", "title":"Parrillas", "managerId": 2, "city":"Scranton, PA", "precio":"1000", "officePhone":"570-968-5741", "email":""},
+{"id": 27, "firstName": "El Saladillo", "image": "", "lastName": "h", "title":"Parrillas", "managerId": 2, "city":"Scranton, PA", "precio":"500", "officePhone":"570-968-5741", "email":""},
+{"id": 28, "firstName": "La Grey Zuliana", "image": "", "lastName": "y", "title":"Parrillas", "managerId": 2, "city":"Scranton, PA", "precio":"500", "officePhone":"570-968-5741", "email":""},
 
 
 ];
+
+
 
