@@ -181,7 +181,8 @@ $('#liston').on('click', '.itemDelete', function() {
     
     var newTotal = totalResta-restante;
     
-    $('#totalpre').text(newTotal);    
+    $('#totalpre').text(newTotal);
+    $("#precio").attr("href",newTotal);    
     
     
 });
