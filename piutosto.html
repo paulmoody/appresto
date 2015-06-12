@@ -151,7 +151,7 @@ $(document).on("click", "#test li" ,function (event) {
     $('.total').text("Total: "+theTotal);
     $('#totalpre').text(theTotal);
     $("#precio").attr("href",theTotal);
-    console.log(theTotal);
+    //console.log(theTotal);
     if(theTotal > 0) {
 	$( ".footer" ).show();
 	}
@@ -161,7 +161,7 @@ $(document).on("click", "#test li" ,function (event) {
 	
 	var item = (($(this).find('h2').text()+' <span id="resta" class="maroon">'+$(this).find("p:first").text()))+'</span> Bsf';
 	//console.log( $(this).find('h2').text()+' algo '+$(this).find("p:first").text()) );
-	console.log(item);
+	//console.log(item);
 
     $('.ul_current').append($('<li class="itemDelete"><a href="#" class="ui-btn ui-shadow ui-icon-delete ui-btn-icon-right ui-custom-icon ui-privacy" >'+ item +'</a></li>', {
     }));
@@ -174,13 +174,14 @@ $(document).on("click", "#test li" ,function (event) {
 $('#liston').on('click', '.itemDelete', function() {
     $(this).closest('li').remove();
     
-    //var resultado = Number($($(this).find("span:first").text()));
-    
-    console.log(parseInt($('#totalpre').text()));
+    var totalResta = parseInt($('#totalpre').text());
     
     
-    //console.log(resultado);
+    var restante = $(this).find("span:first").text();
     
+    var newTotal = totalResta-restante;
+    
+    $('#totalpre').text(newTotal);    
     
     
 });
