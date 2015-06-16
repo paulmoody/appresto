@@ -362,6 +362,10 @@ input[type=text] {
    background-image: -ms-linear-gradient(top, #3e779d 0%, #65a9d7 100%);
    color: #fff;
    }
+.transp {
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-tap-highlight-color: transparent; /* For some Androids */
+}
 #footer {
     position: fixed;
     bottom: 0;
