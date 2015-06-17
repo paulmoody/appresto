@@ -71,7 +71,7 @@ var app = {
 	
 	renderHomeView: function() {
                
-                $('#bar').html(this.homeTpl());
+                $('body').html(this.homeTpl());
  
     },
 	
