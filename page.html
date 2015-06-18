@@ -34,6 +34,9 @@ z-index:999999;
 a:active {
     color: #000;
 }
+#name2{
+	display:none;
+}
 </style>
 
 
@@ -114,38 +117,56 @@ a:active {
 <!-- /page -->
 
 <!-- Start of second page -->
-<script id="home-tpl" type="text/x-handlebars-template">
-
-
-
-
 <div data-role="page" id="bar">
 
-	<div data-role="header" data-position="fixed" style="background:#E8561D">
-        <!--<a id="openpanel" data-icon="bars" data-iconpos="notext">Home</a>--> 
-		<img src="img/logonar.jpg" alt="" />
-        
-   <div class="overlay" id="overlay" style="display:none;"></div>
- 
-<div class="box" id="box">
-<div class="box-inner" >
-        <ul id="liston" class="ul_current" data-role="listview">
-			<li id="close">
-			<h3 style="float: left">Su Pedido:</h3>
-			<h3 style="float: right" class="color"><a href="pago.html" id="precio">Procesar Pago</a></h3>
-			<h3 style="bottom: 0;width: 100%;">Total a pagar: <span  class="green" id="totalpre"></span> Bsf  </h3>
-			</li> 
+	<div id="menu">
+        <ul>
+        	<!--<li><img src="img/menima1.png" alt=""></li>-->
+            <li><a href="">Mi Perfil</a></li>
+            <li><a href="#">Favoritos</a></li>
+            <li><a href="#">Notificaciones</a></li>
+            <li><a href="#">Art&iacute;culos y reseñas</a></li>
+            <li><a href="#">Sociales</a></li>
+			<li><a href="#">Novedades</a></li>
+			<li><a href="#">Acerca de Flashclicks</a></li>
+			<li><a href="#">Salir</a></li>
+
+
+
+				
         </ul>
-    </div> 
-</div>     
+    </div>
+    <div id="right">
+        <div id="menubar">
         
-	</div><!-- /header -->
+		<ul class="nav">
+		  <li id="button" class="leftm">
+		  <img src="img/menuico2.png" /></li>
+		  <li class="rightm">
+		  	<img src="img/Search.png" id="puppies"/>
+		  	<!---<div id="wrap">
+			  <form action="" autocomplete="on">
+			  <input id="search" name="search" type="text" placeholder="What're we looking for ?"><input id="search_submit" value="Rechercher" type="submit">
+			  </form>
+			</div>-->
+		  </li>
+		  <li class="centerm">
+		  	<div class="logopri" id="1">
+				<img src="img/logonar.jpg" height="40" width="200" /></div>
+		  	<div class="logoprititulo" id="1"></div>
+		  	
+		  </li>
+		</ul>
+            
+        </div>
 
 
+ 
+    <div id="id01">
+    <div class="scroll">
     
     
-    
-	<div data-role="content">	
+    	<div data-role="content">	
 				
 		<div style="padding-top: 10px;padding-bottom: 10px;">
     				<img src="img/puittosto.jpg" alt="" />
@@ -153,24 +174,24 @@ a:active {
 
     			<div data-role="collapsible" data-theme="a" data-content-theme="a" data-inset="true">
 				    <h3>Pastas Tradicionales</h3>
-				    <ul id="test" data-role="listview" class='employee-list1'>			    	
+				    <ul id="test" data-role="listview" class='piu1'>			    	
 				    						    					 				    
 				    </ul>
 				</div><!-- /collapsible -->
 				
 				<div data-role="collapsible" data-theme="a" data-content-theme="a" data-inset="true">
 				    <h3>Pastas de la Casa</h3>
-				    <ul id="test" data-role="listview" class='employee-list2'></ul>
+				    <ul id="test" data-role="listview" class='piu2'></ul>
 				</div><!-- /collapsible -->
 				
 				<div data-role="collapsible" data-theme="a" data-content-theme="a" data-inset="true">
 				    <h3>Carne, Ave y Pescado</h3>
-				    <ul id="test" data-role="listview" class='employee-list3'></ul>
+				    <ul id="test" data-role="listview" class='piu3'></ul>
 				</div><!-- /collapsible -->
 				
 				<div data-role="collapsible" data-theme="a" data-content-theme="a" data-inset="true">
 				    <h3>Menu del Dia</h3>
-				    <ul id="test" data-role="listview" class='employee-list4'></ul>
+				    <ul id="test" data-role="listview" class='piu4'></ul>
 				</div><!-- /collapsible -->
 				
 				  	 								
@@ -180,21 +201,24 @@ a:active {
 	
 	</div><!-- /content -->
 
-	<div class="footer" data-role="footer" data-position="fixed" style="z-index: 1">
-		<h4>Su Pedido:   <span  class="total"></span> bsf </h4>
-		<a id="openpanel" data-icon="bars" data-iconpos="notext">Home</a>
-	</div><!-- /footer -->
+    
+    
+    </div>
+    </div>
+    </div>
+
+	
+	
+	
+	
+	
 </div><!-- /page -->
-
-</script>
-
-<!-- /page -->
 
 <script src="phonegap.js"></script>
 <script src="lib/handlebars.js"></script>
 <script src="js/regpiutosto.js"></script>
 <script src="js/storage/memory-store.js"></script>
-<script src="mainpiutosto.js"></script>
+<script src="mainpiutest.js"></script>
 
 
 <script type="text/javascript">
@@ -202,7 +226,7 @@ a:active {
 
 function GoTopage1()
 {
-        $.mobile.changePage( "bibas.html", { transition: "slide"} );        
+        $.mobile.changePage( "#bar", { transition: "slide"} );        
 }
 
 
