@@ -1,0 +1,140 @@
+
+<!-- saved from url=(0069)file:///C:/Users/tatoww/Documents/GitHub/appresto/appresto/index.html -->
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<script src="css/source-sans-pro.js"></script>
+<script src="lib/iscroll.js"></script>
+<link href="styles.css" rel="stylesheet">
+<script src="lib/jquery-1.8.2.min.js"></script>
+<style type="text/css">
+.listado li
+{
+display: inline !important;
+list-style-type: none;
+padding-right: 20px;
+}
+</style>
+<link rel="stylesheet" href="css/flexslider.css" type="text/css">
+<script src="js/jquery.flexslider.js"></script>
+<script type="text/javascript" charset="utf-8">
+</script>
+
+<style type="text/css">
+.box{
+position:fixed;
+bottom:-100%;
+left:0%;
+height:100%; 
+background-color: #DBDBDB;
+width: 100%;
+display: block;
+z-index:999999;
+}
+.box-inner {
+    position: absolute;
+    width:100%;
+    top: 0px;
+    bottom: 0px;
+    /*overflow: scroll;*/
+    -webkit-overflow-scrolling: touch;
+}
+a:active {
+    color: #000;
+}
+</style>
+
+
+</head>
+
+<body>
+   
+	 <div id="menu">
+        <ul>
+        	<!--<li><img src="img/menima1.png" alt=""></li>-->
+            <li><a href="">Mi Perfil</a></li>
+            <li><a href="#">Favoritos</a></li>
+            <li><a href="#">Notificaciones</a></li>
+            <li><a href="#">Art&iacute;culos y reseñas</a></li>
+            <li><a href="#">Sociales</a></li>
+			<li><a href="#">Novedades</a></li>
+			<li><a href="#">Acerca de Flashclicks</a></li>
+			<li><a href="#">Salir</a></li>
+
+
+
+				
+        </ul>
+    </div>
+    <div id="right">
+        <div id="menubar">
+        
+		<ul class="nav">
+		  <li id="button" class="leftm"><img src="img/menuico2.png" /></li>
+		  <li class="rightm">
+		  	<img src="img/Search.png" id="puppies"/>
+		  	<!---<div id="wrap">
+			  <form action="" autocomplete="on">
+			  <input id="search" name="search" type="text" placeholder="What're we looking for ?"><input id="search_submit" value="Rechercher" type="submit">
+			  </form>
+			</div>-->
+		  </li>
+		  <li class="centerm">
+		  	<div class="logopri" id="1">
+				<img src="img/logonar.jpg" height="40" width="200"></div>
+		  	<div class="logoprititulo" id="1"></div>
+		  	
+		  </li>
+		</ul>
+            
+        </div>
+
+
+ 
+    <div id="id01">
+    <div class="scroll"><ul class="employee-list">
+    <!--<li><a href="maracaibo.html"><img src="img/maracaibo.jpg" style="width:100%"></a></li>
+    <li><a href="bibas.html"><img src="img/bibas.png" style="width:100%"></a></li>
+    <li><a href="movie.html"><img src="img/movieexpress.jpg" style="width:100%"></a></li>-->
+    <li class="transp" onclick="location.href='piutosto.html'"><img src="img/puittosto.jpg"><a href="piutosto.html"><span class="titulo" style="width: 100%">Puittosto</span><br><span class="categoria" style="width: 100%">Comida Italiana</span><br>Valoracion:<br><span class="categoria" style="width: 100%"><img src="img/5star.jpg"></span></a><p style="color:green;font-size:1.2em;line-height:50px">Abierto</p></li>
+    <li class="transp" onclick="location.href='maracaibo.html'"><img src="img/maracaibogrill.jpg"><a href="maracaibo.html"><span class="titulo" style="width: 100%">Maracaibo Grill</span><br><span class="categoria" style="width: 100%">Comida Zuliana</span><br>Valoracion:<br><span class="categoria" style="width: 100%"><img src="img/5star.jpg"></span></a><p style="color:green;font-size:1.2em;line-height:50px">Abierto</p></li>
+    <li class="transp" onclick="location.href='bibas.html'"><img src="img/bibas.jpg"><a href="page.html"><span class="titulo" style="width: 100%">Bibas</span><br><span class="categoria" style="width: 100%">Comida Americana</span><br>Valoracion:<br><span class="categoria" style="width: 100%"><img src="img/5star.jpg"></span></a><p style="color:green;font-size:1.2em;line-height:50px">Abierto</p></li>
+    </ul></div>
+    </div>
+    </div>
+    
+<script type="text/javascript">
+
+function GoTopage1()
+{
+        $.mobile.changePage( "piuttosto.html", { transition: "slide"} );        
+}
+
+
+$('#button').toggle( 
+    function() {
+        $('#right').animate({ left: 200 }, 'fast', function() {
+            //$('#button').html('Close');
+        });
+    }, 
+    function() {
+        $('#right').animate({ left: 0 }, 'fast', function() {
+            //$('#button').html('Menu');
+        });
+    }
+);
+
+$('#puppies').toggle(
+function() {
+  $('#1').html('<input id="botoxx" name="Button1" type="text" value="" style="width: 200px; height: 42px; font-size: 20;" />');
+  $('#botoxx').focus();
+},
+function() {
+  $('#1').html('<img src="img/logonar.jpg" />');
+}
+);
+
+
+
+</script>
+
+</body></html>
