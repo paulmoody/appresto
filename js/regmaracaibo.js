@@ -1,4 +1,4 @@
-var registrosJson=[
+var maraJson=[
 //Entradas
 {"id": 1, "firstName": "Almuerzo Ejecutivo", "image": "", "lastName": "E", "title":"Almuerzo", "managerId": 1, "city":"", "precio":"300", "officePhone":"570-123-4567", "email":""},
 {"id": 2, "firstName": "Charrasca", "image": "", "lastName": "n", "title":"Arepas", "managerId": 2, "city":"", "precio":"250", "officePhone":"570-843-8963", "email":""},
