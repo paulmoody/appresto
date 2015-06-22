@@ -47,6 +47,21 @@ var app = {
     	    		$('.employee-list6').append('<li class="precio"><a href="#"><img src="img/bibas.jpg"><h2>'+ e.firstName +'</h2><p style="display:none" >150</p><label for="name2" style="color: green;font-size: 15px; ">150 Bsf</label><input type="text" name="name2" id="name2" value="" data-clear-btn="true" hidden="hidden" data-role="none"></a></li>');
 															  																	
     	    	};
+    	    	
+    	    	for(i = 35; i<39; i++) 
+    	    	{
+    	    		e = arr[i];
+    	    		$('.employee-list7').append('<li class="precio"><a href="#"><img src="img/bibas.jpg"><h2>'+ e.firstName +'</h2><p style="display:none" >150</p><label for="name2" style="color: green;font-size: 15px; ">150 Bsf</label><input type="text" name="name2" id="name2" value="" data-clear-btn="true" hidden="hidden" data-role="none"></a></li>');
+															  																	
+    	    	};
+    	    	
+    	    	for(i = 39; i<46; i++) 
+    	    	{
+    	    		e = arr[i];
+    	    		$('.employee-list8').append('<li class="precio"><a href="#"><img src="img/bibas.jpg"><h2>'+ e.firstName +'</h2><p style="display:none" >150</p><label for="name2" style="color: green;font-size: 15px; ">150 Bsf</label><input type="text" name="name2" id="name2" value="" data-clear-btn="true" hidden="hidden" data-role="none"></a></li>');
+															  																	
+    	    	};
+
 
 
 
