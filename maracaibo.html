@@ -1,12 +1,12 @@
-﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+﻿<!DOCTYPE html>
+<html>
 
 <head>
 <meta content="width=device-width, initial-scale=1" name="viewport" />
 <title>Bibas</title>
-<link href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" rel="stylesheet" />
-<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
-<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+<link href="js/jquery.mobile-1.4.5.min.css" rel="stylesheet" />
+<script src="js/jquery-1.11.2.min.js"></script>
+<script src="js/jquery.mobile-1.4.5.min.js"></script>
 <style type="text/css">
 .box {
 	position: fixed;
@@ -34,6 +34,10 @@
 .green {
 	color: green;
 }
+.maroon {
+	color:  maroon;
+}
+
 .cuestion {
 	display: inline !important;
 }
@@ -57,10 +61,10 @@
  
 <div class="box" id="box">
 <div class="box-inner" >
-        <ul  class="ul_current" data-role="listview">
+        <ul id="liston" class="ul_current" data-role="listview">
 			<li id="close">
 			<h3 style="float: left">Su Pedido:</h3>
-			<h3 style="float: right" class="color"><a href="pago.html">Procesar Pago</a></h3>
+			<h3 style="float: right" class="color"><a href="pago.html" id="precio">Procesar Pago</a></h3>
 			<h3 style="bottom: 0;width: 100%;">Total a pagar: <span  class="green" id="totalpre"></span> Bsf  </h3>
 			</li> 
         </ul>
@@ -87,25 +91,65 @@
 				</div><!-- /collapsible -->
 				
 				<div data-role="collapsible" data-theme="a" data-content-theme="a" data-inset="true">
-				    <h3>Pollos</h3>
+				    <h3>Arepas</h3>
 				    <ul id="test" data-role="listview" class='employee-list2'></ul>
 				</div><!-- /collapsible -->
 				
 				<div data-role="collapsible" data-theme="a" data-content-theme="a" data-inset="true">
-				    <h3>Carnes</h3>
+				    <h3>Ensaladas</h3>
 				    <ul id="test" data-role="listview" class='employee-list3'></ul>
 				</div><!-- /collapsible -->
 				
 				<div data-role="collapsible" data-theme="a" data-content-theme="a" data-inset="true">
-				    <h3>Ensaladas</h3>
+				    <h3>Hamburguesas</h3>
 				    <ul id="test" data-role="listview" class='employee-list4'></ul>
 				</div><!-- /collapsible -->
 				
 				<div data-role="collapsible" data-theme="a" data-content-theme="a" data-inset="true">
-				    <h3>Postres</h3>
+				    <h3>Parrillas</h3>
 				    <ul id="test" data-role="listview" class='employee-list5'></ul>
 				</div><!-- /collapsible -->
-  	 								
+				
+				<div data-role="collapsible" data-theme="a" data-content-theme="a" data-inset="true">
+				    <h3>Panes</h3>
+				    <ul id="test" data-role="listview" class='employee-list6'></ul>
+				</div><!-- /collapsible -->
+				
+				<div data-role="collapsible" data-theme="a" data-content-theme="a" data-inset="true">
+				    <h3>Hot Dogs</h3>
+				    <ul id="test" data-role="listview" class='employee-list7'></ul>
+				</div><!-- /collapsible -->
+				
+				<div data-role="collapsible" data-theme="a" data-content-theme="a" data-inset="true">
+				    <h3>Costillas</h3>
+				    <ul id="test" data-role="listview" class='employee-list8'></ul>
+				</div><!-- /collapsible -->
+				
+				<div data-role="collapsible" data-theme="a" data-content-theme="a" data-inset="true">
+				    <h3>Patacon</h3>
+				    <ul id="test" data-role="listview" class='employee-list9'></ul>
+				</div><!-- /collapsible -->
+				
+				<div data-role="collapsible" data-theme="a" data-content-theme="a" data-inset="true">
+				    <h3>Bebidas</h3>
+				    <ul id="test" data-role="listview" class='employee-list10'></ul>
+				</div><!-- /collapsible -->
+				
+				<div data-role="collapsible" data-theme="a" data-content-theme="a" data-inset="true">
+				    <h3>Almuerzoz</h3>
+				    <ul id="test" data-role="listview" class='employee-list11'></ul>
+				</div><!-- /collapsible -->
+
+
+
+
+				
+				
+
+
+
+				
+				  	 								
 
 
 
@@ -121,7 +165,7 @@
 </script>
 <script src="phonegap.js"></script>
 <script src="lib/handlebars.js"></script>
-<script src="js/regmaracaibo.js"></script>
+<script src="regmaracaibo.js"></script>
 <script src="js/storage/memory-store.js"></script>
 <script src="mainmaracaibo.js"></script><script type="text/javascript">
 
@@ -145,12 +189,13 @@ $(function() {
     
     
 //}); 
-
 var theTotal = 0;
 $(document).on("click", "#test li" ,function (event) {
    theTotal = Number(theTotal) + Number($(this).find("p:first").text());
     $('.total').text("Total: "+theTotal);
     $('#totalpre').text(theTotal);
+    $("#precio").attr("href",theTotal);
+    //console.log(theTotal);
     if(theTotal > 0) {
 	$( ".footer" ).show();
 	}
@@ -158,16 +203,38 @@ $(document).on("click", "#test li" ,function (event) {
 		$( ".footer" ).hide();
 	}
 	
-	var item = ($(this).text());
+	var item = (($(this).find('h2').text()+' <span id="resta" class="maroon">'+$(this).find("p:first").text()))+'</span> Bsf';
+	//console.log( $(this).find('h2').text()+' algo '+$(this).find("p:first").text()) );
+	//console.log(item);
 
-    $('.ul_current').append($('<li><a href="#" class="ui-btn ui-shadow ui-btn-icon-left ui-custom-icon ui-privacy" >'+ item +'</a></li>', {
+    $('.ul_current').append($('<li class="itemDelete"><a href="#" class="ui-btn ui-shadow ui-icon-delete ui-btn-icon-right ui-custom-icon ui-privacy" >'+ item +'</a></li>', {
     }));
 	
         
 });
 
+//Eliminar items de la lista y restar del total
+
+$('#liston').on('click', '.itemDelete', function() {
+    $(this).closest('li').remove();
+    
+    var totalResta = parseInt($('#totalpre').text());
+    
+    
+    var restante = $(this).find("span:first").text();
+    
+    var newTotal = totalResta-restante;
+    
+    $('#totalpre').text(newTotal);
+    $("#precio").attr("href",newTotal);    
+    
+    
+});
+
+//var item = ($(this).text());
 
 
+//Totalizador de factura
 $('.total').text("Total: "+theTotal);
 
 	$("#show").click(function(){
@@ -181,6 +248,21 @@ if(theTotal > 0) {
 else{
 	$( ".footer" ).hide();
 }
+
+
+//click controller
+$(document).ready(function(){
+
+  $("#precio").click(function(){
+
+    // do something
+    var href = $('#precio').attr('href');
+    window.location.href = 'pago.html' + '#' + href;
+
+  });
+
+});
+
 
 
 </script>

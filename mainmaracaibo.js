@@ -9,30 +9,86 @@ var app = {
     	    	for(i = 0; i<1; i++) 
     	    	{
     	    		e = arr[i];
-    	    		$('.employee-list1').append('<li class="precio"><a href="#"><img src="img/bibas.jpg"><h2>'+ e.firstName +'</h2><p style="display:none" >'+e.precio+'</p><label for="name2" style="color: green;font-size: 15px; ">'+e.precio+' Bsf</label><input type="text" name="name2" id="name2" value="" data-clear-btn="true" hidden="hidden" data-role="none"></a></li>');
+    	    		$('.employee-list1').append('<li class="precio"><a href="#"><img src="img/grill.png"><h2>'+ e.firstName +'</h2><p style="display:none" >'+e.precio+'</p><label for="name2" style="color: green;font-size: 15px; ">'+e.precio+' Bsf</label><input type="text" name="name2" id="name2" value="" data-clear-btn="true" hidden="hidden" data-role="none"></a></li>');
 															  																	
     	    	};
     	    	
-    	    	for(i = 1; i<5; i++) 
+    	    	for(i = 1; i<4; i++) 
     	    	{
     	    		e = arr[i];
-    	    		$('.employee-list2').append('<li class="precio"><a href="#"><img src="img/bibas.jpg"><h2>'+ e.firstName +'</h2><p style="display:none" >'+e.precio+'</p><label for="name2" style="color: green;font-size: 15px; ">'+e.precio+' Bsf</label><input type="text" name="name2" id="name2" value="" data-clear-btn="true" hidden="hidden" data-role="none"></a></li>');
+    	    		$('.employee-list2').append('<li class="precio"><a href="#"><img src="img/grill.png"><h2>'+ e.firstName +'</h2><p style="display:none" >'+e.precio+'</p><label for="name2" style="color: green;font-size: 15px; ">'+e.precio+' Bsf</label><input type="text" name="name2" id="name2" value="" data-clear-btn="true" hidden="hidden" data-role="none"></a></li>');
 															  																	
     	    	};
     	    	
-    	    	for(i = 5; i<8; i++) 
+    	    	for(i = 4; i<5; i++) 
     	    	{
     	    		e = arr[i];
-    	    		$('.employee-list3').append('<li class="precio"><a href="#"><img src="img/bibas.jpg"><h2>'+ e.firstName +'</h2><p style="display:none" >'+e.precio+'</p><label for="name2" style="color: green;font-size: 15px; ">'+e.precio+' Bsf</label><input type="text" name="name2" id="name2" value="" data-clear-btn="true" hidden="hidden" data-role="none"></a></li>');
+    	    		$('.employee-list3').append('<li class="precio"><a href="#"><img src="img/grill.png"><h2>'+ e.firstName +'</h2><p style="display:none" >'+e.precio+'</p><label for="name2" style="color: green;font-size: 15px; ">'+e.precio+' Bsf</label><input type="text" name="name2" id="name2" value="" data-clear-btn="true" hidden="hidden" data-role="none"></a></li>');
 															  																	
     	    	};
     	    	
-    	    	for(i = 8; i<arr.length; i++) 
+    	    	for(i = 5; i<12; i++) 
     	    	{
     	    		e = arr[i];
-    	    		$('.employee-list4').append('<li class="precio"><a href="#"><img src="img/bibas.jpg"><h2>'+ e.firstName +'</h2><p style="display:none" >'+e.precio+'</p><label for="name2" style="color: green;font-size: 15px; ">'+e.precio+' Bsf</label><input type="text" name="name2" id="name2" value="" data-clear-btn="true" hidden="hidden" data-role="none"></a></li>');
+    	    		$('.employee-list4').append('<li class="precio"><a href="#"><img src="img/grill.png"><h2>'+ e.firstName +'</h2><p style="display:none" >'+e.precio+'</p><label for="name2" style="color: green;font-size: 15px; ">'+e.precio+' Bsf</label><input type="text" name="name2" id="name2" value="" data-clear-btn="true" hidden="hidden" data-role="none"></a></li>');
 															  																	
     	    	};
+    	    	
+    	    	for(i = 12; i<15; i++) 
+    	    	{
+    	    		e = arr[i];
+    	    		$('.employee-list5').append('<li class="precio"><a href="#"><img src="img/grill.png"><h2>'+ e.firstName +'</h2><p style="display:none" >'+e.precio+'</p><label for="name2" style="color: green;font-size: 15px; ">'+e.precio+' Bsf</label><input type="text" name="name2" id="name2" value="" data-clear-btn="true" hidden="hidden" data-role="none"></a></li>');
+															  																	
+    	    	};
+    	    	
+    	    	for(i = 15; i<17; i++) 
+    	    	{
+    	    		e = arr[i];
+    	    		$('.employee-list6').append('<li class="precio"><a href="#"><img src="img/grill.png"><h2>'+ e.firstName +'</h2><p style="display:none" >'+e.precio+'</p><label for="name2" style="color: green;font-size: 15px; ">'+e.precio+' Bsf</label><input type="text" name="name2" id="name2" value="" data-clear-btn="true" hidden="hidden" data-role="none"></a></li>');
+															  																	
+    	    	};
+    	    	
+    	    	for(i = 17; i<20; i++) 
+    	    	{
+    	    		e = arr[i];
+    	    		$('.employee-list7').append('<li class="precio"><a href="#"><img src="img/grill.png"><h2>'+ e.firstName +'</h2><p style="display:none" >'+e.precio+'</p><label for="name2" style="color: green;font-size: 15px; ">'+e.precio+' Bsf</label><input type="text" name="name2" id="name2" value="" data-clear-btn="true" hidden="hidden" data-role="none"></a></li>');
+															  																	
+    	    	};
+    	    	
+    	    	for(i = 20; i<21; i++) 
+    	    	{
+    	    		e = arr[i];
+    	    		$('.employee-list8').append('<li class="precio"><a href="#"><img src="img/grill.png"><h2>'+ e.firstName +'</h2><p style="display:none" >'+e.precio+'</p><label for="name2" style="color: green;font-size: 15px; ">'+e.precio+' Bsf</label><input type="text" name="name2" id="name2" value="" data-clear-btn="true" hidden="hidden" data-role="none"></a></li>');
+															  																	
+    	    	};
+    	    	
+    	    	for(i = 21; i<22; i++) 
+    	    	{
+    	    		e = arr[i];
+    	    		$('.employee-list9').append('<li class="precio"><a href="#"><img src="img/grill.png"><h2>'+ e.firstName +'</h2><p style="display:none" >'+e.precio+'</p><label for="name2" style="color: green;font-size: 15px; ">'+e.precio+' Bsf</label><input type="text" name="name2" id="name2" value="" data-clear-btn="true" hidden="hidden" data-role="none"></a></li>');
+															  																	
+    	    	};
+    	    	
+    	    	for(i = 22; i<23; i++) 
+    	    	{
+    	    		e = arr[i];
+    	    		$('.employee-list10').append('<li class="precio"><a href="#"><img src="img/grill.png"><h2>'+ e.firstName +'</h2><p style="display:none" >'+e.precio+'</p><label for="name2" style="color: green;font-size: 15px; ">'+e.precio+' Bsf</label><input type="text" name="name2" id="name2" value="" data-clear-btn="true" hidden="hidden" data-role="none"></a></li>');
+															  																	
+    	    	};
+    	    	
+    	    	for(i = 23; i<arr.length; i++) 
+    	    	{
+    	    		e = arr[i];
+    	    		$('.employee-list11').append('<li class="precio"><a href="#"><img src="img/grill.png"><h2>'+ e.firstName +'</h2><p style="display:none" >'+e.precio+'</p><label for="name2" style="color: green;font-size: 15px; ">'+e.precio+' Bsf</label><input type="text" name="name2" id="name2" value="" data-clear-btn="true" hidden="hidden" data-role="none"></a></li>');
+															  																	
+    	    	};
+
+
+
+
+
+
+
     	    	
     	    
     	    	
