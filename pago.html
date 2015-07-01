@@ -87,10 +87,15 @@ var text = window.location.hash.substring(1);
 $( "#total" ).append(text + " Bsf");
 
 $('.my-form').on('submit', function () {
-    alert(text);
+    alert('Orden enviada!');
     window.location.replace("index.html")
     return false;
 });
+
+var retrievedObject = localStorage.getItem('testObject');
+
+console.log('retrievedObject: ', JSON.parse(retrievedObject));
+
 
 </script>
 
