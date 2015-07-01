@@ -37,7 +37,7 @@
     				<p id="total" class="auto-style1"></p>
 				</div>
 
-    			<form method="post" data-ajax="false" action="index.html">
+    			<form class="my-form" data-ajax="false">
 				    <label for="fname" >Datos de Envio</label>
 				    <input type="text" name="fname" id="fname" placeholder="Telefono...">
 				    <input type="text" name="fname" id="fname" placeholder="Direccion...">
@@ -86,6 +86,11 @@ var text = window.location.hash.substring(1);
 
 $( "#total" ).append(text + " Bsf");
 
+$('.my-form').on('submit', function () {
+    alert(text);
+    window.location.replace("index.html")
+    return false;
+});
 
 </script>
 
