@@ -88,6 +88,24 @@ $( "#total" ).append(text + " Bsf");
 
 $('.my-form').on('submit', function () {
     alert('Orden enviada!');
+    
+    	//agregar parametros
+    	console.log('addWine');
+	    $.ajax({
+	        type: 'POST',
+	        contentType: 'application/json',
+	        url: 'http://flashclicks.com.ve/cellar/api/wines',
+	        dataType: "json",
+	        data: '{"precio": '+text+', "transfer": "3434"}' ,
+	        success: function(data, textStatus, jqXHR){
+	            alert('Order created successfully');
+	       	},
+	        error: function(jqXHR, textStatus, errorThrown){
+	            alert('addWine error: ' + textStatus);
+	        }
+	    });
+	 
+    
     window.location.replace("index.html")
     return false;
 });
