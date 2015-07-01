@@ -99,6 +99,7 @@ $('.my-form').on('submit', function () {
 	        data: '{"precio": '+text+', "transfer": "3434"}' ,
 	        success: function(data, textStatus, jqXHR){
 	            alert('Order created successfully');
+	            window.location.replace("index.html")
 	       	},
 	        error: function(jqXHR, textStatus, errorThrown){
 	            alert('addWine error: ' + textStatus);
@@ -106,7 +107,7 @@ $('.my-form').on('submit', function () {
 	    });
 	 
     
-    window.location.replace("index.html")
+    
     return false;
 });
 
