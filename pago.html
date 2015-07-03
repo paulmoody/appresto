@@ -11,6 +11,44 @@
 	color: #008000;
 }
 </style>
+<script type="application/javascript">
+
+(function($) {
+    $.fn.enterAsTab = function(options) {
+        var settings = $.extend({
+            'allowSubmit': false
+        }, options);
+        $(this).find('input, select, textarea, button').live("keydown", {localSettings: settings}, function(event) {
+            if (settings.allowSubmit) {
+                var type = $(this).attr("type");
+                if (type == "submit") {
+                    return true;
+                }
+            }
+            if (event.keyCode == 13) {
+                var inputs = $(this).parents("form").eq(0).find(":input:visible:not(:disabled):not([readonly])");
+                var idx = inputs.index(this);
+                if (idx == inputs.length - 1) {
+                    idx = -1;
+                } else {
+                    inputs[idx + 1].focus(); // handles submit buttons
+                }
+                try {
+                    inputs[idx + 1].select();
+                }
+                catch (err) {
+                   
+                }
+                return false;
+            }
+        });
+        return this;
+    };
+})(jQuery);
+
+$("#form").enterAsTab({ 'allowSubmit': true});
+
+</script>
 </head>
 <body>
 
@@ -37,10 +75,11 @@
     				<p id="total" class="auto-style1"></p>
 				</div>
 
-    			<form class="my-form" data-ajax="false">
+    			<form class="my-form" data-ajax="false" id="form">
 				    <label for="fname" >Datos de Envio</label>
-				    <input type="text" name="fname" id="fname" placeholder="Telefono...">
-				    <input type="text" name="fname" id="fname" placeholder="Direccion...">
+				    <input type="text" name="fname" id="fname" placeholder="Nombre...">
+				    <input type="text" name="fdic" id="fdic" placeholder="Direccion...">
+                    <input type="text" name="ftel" id="ftel" placeholder="Telefono...">
 				    <label for="select-choice-0" class="select">Metodo de Pago:</label>
 					<select name="select-choice-0" id="select-choice-1">
 					   <option value="standard">Transferencia</option>
@@ -86,20 +125,23 @@ var text = window.location.hash.substring(1);
 
 $( "#total" ).append(text + " Bsf");
 
-$('.my-form').on('submit', function () {
+
+/*$('.my-form').on('submit', function () {
     alert('Orden enviada!');
-    
+    var nombre = JSON.stringify($( "#fname" ).val());
+    var direccion = JSON.stringify($( "#fdic" ).val());
+    var telefono = JSON.stringify($( "#ftel" ).val());
     	//agregar parametros
     	console.log('addWine');
 	    $.ajax({
 	        type: 'POST',
 	        contentType: 'application/json',
-	        url: 'http://flashclicks.com.ve/cellar/api/wines',
+	        url: 'http://192.168.1.118/cellar/api/wines',
 	        dataType: "json",
-	        data: '{"precio": '+text+', "transfer": "3434"}' ,
+	        data: '{"nombre": '+nombre+', "precio": '+text+', "transfer": "3434"}' ,
 	        success: function(data, textStatus, jqXHR){
 	            alert('Order created successfully');
-	            window.location.replace("index.html")
+	            window.location.replace("index.html");
 	       	},
 	        error: function(jqXHR, textStatus, errorThrown){
 	            alert('addWine error: ' + textStatus);
@@ -109,7 +151,7 @@ $('.my-form').on('submit', function () {
     
     
     return false;
-});
+});*/
 
 var retrievedObject = localStorage.getItem('testObject');
 

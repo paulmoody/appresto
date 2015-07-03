@@ -7,6 +7,12 @@
 <link href="styles.css" rel="stylesheet">
 <script src="lib/jquery-1.8.2.min.js"></script>
 <script src="phonegap.js"></script>
+<!-- Include js plugin -->
+<script src="owl-carousel/owl.carousel.js"></script>
+<!-- Important Owl stylesheet -->
+<link rel="stylesheet" href="owl-carousel/owl.carousel.css">
+<!-- Default Theme -->
+<link rel="stylesheet" href="owl-carousel/owl.theme.css">
 <style type="text/css">
 .listado li
 {
@@ -15,8 +21,6 @@ list-style-type: none;
 padding-right: 20px;
 }
 </style>
-<link rel="stylesheet" href="css/flexslider.css" type="text/css">
-<script src="js/jquery.flexslider.js"></script>
 <script type="text/javascript" charset="utf-8">
 </script>
 
@@ -42,7 +46,37 @@ z-index:999999;
 a:active {
     color: #000;
 }
+#owl-demo .item img{
+    display: block;
+    width: 100%;
+    height: auto;
+}
 </style>
+<script type="text/javascript">
+
+$(document).ready(function() {
+ 
+  $("#owl-demo").owlCarousel({
+ 
+      navigation : true, // Show next and prev buttons
+      slideSpeed : 300,
+      paginationSpeed : 400,
+      singleItem:true
+ 
+      // "singleItem:true" is a shortcut for:
+      // items : 1, 
+      // itemsDesktop : false,
+      // itemsDesktopSmall : false,
+      // itemsTablet: false,
+      // itemsMobile : false
+ 
+  });
+ 
+});
+
+
+
+</script>
 
 
 </head>
@@ -96,6 +130,18 @@ a:active {
     <!--<li><a href="maracaibo.html"><img src="img/maracaibo.jpg" style="width:100%"></a></li>
     <li><a href="bibas.html"><img src="img/bibas.png" style="width:100%"></a></li>
     <li><a href="movie.html"><img src="img/movieexpress.jpg" style="width:100%"></a></li>-->
+    <li>
+    	
+ 		<div id="owl-demo" class="owl-carousel owl-theme">
+ 
+		  <div class="item"><img src="img/fullimage1.jpg" alt="The Last of us"></div>
+		  <div class="item"><img src="img/fullimage2.jpg" alt="GTA V"></div>
+		  <div class="item"><img src="img/fullimage3.jpg" alt="Mirror Edge"></div>
+		 
+		</div>
+    
+    
+    </li>
     <li class="transp" onclick="location.href='piutosto.html'"><img src="img/puittosto.jpg"><a href="piutosto.html"><span class="titulo" style="width: 100%">Puittosto</span><br><span class="categoria" style="width: 100%">Comida Italiana</span><br>Valoracion:<br><span class="categoria" style="width: 100%"><img src="img/5star.jpg"></span></a><p style="color:green;font-size:1.2em;line-height:50px">Abierto</p></li>
     <li class="transp" onclick="location.href='maracaibo.html'"><img src="img/maracaibogrill.jpg"><a href="maracaibo.html"><span class="titulo" style="width: 100%">Maracaibo Grill</span><br><span class="categoria" style="width: 100%">Comida Zuliana</span><br>Valoracion:<br><span class="categoria" style="width: 100%"><img src="img/5star.jpg"></span></a><p style="color:green;font-size:1.2em;line-height:50px">Abierto</p></li>
     <li class="transp" onclick="location.href='bibas.html'"><img src="img/bibas.jpg"><a href="bibas.html"><span class="titulo" style="width: 100%">Bibas</span><br><span class="categoria" style="width: 100%">Comida Americana</span><br>Valoracion:<br><span class="categoria" style="width: 100%"><img src="img/5star.jpg"></span></a><p style="color:green;font-size:1.2em;line-height:50px">Abierto</p></li>
